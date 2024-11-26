@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Practice ESAM</title>
+    <link rel="shortcut icon" href="./assets/airplane_favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4a08b1e9c6.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./disclaimer.js" defer></script>
+    <script src="./script.js" defer></script>
+    <script src="./modals.js" defer></script>
+    <script src="./weather.js" defer></script>
+  </head>
+  <body>
+    <dialog class="disclaimer-dialog">
+      <div class="disclaimer">
+        <img
+          class="modal-decoration-1"
+          src="./assets/purple_flower.png"
+          alt=""
+        />
+        <img
+          class="modal-decoration-2"
+          src="./assets/purple_flower.png"
+          alt=""
+        />
+
+        <p>
+          This page was re-created WITHOUT permission as an educational exercise
+          by Steve Majewski.
+        </p>
+        <button class="btn-ok">OK</button>
+      </div>
+    </dialog>
+    <div class="header">
+      <img src="./assets/web_esam_logo_colorHorizontal_edited.png" alt="" />
+      <ul>
+        <li tabindex="0">
+          VISIT
+          <div class="nav-dropdown">
+            <ul>
+              <li>Hours, Pricing & Directions</li>
+              <li>Events at ESAM</li>
+              <li>Museum Maps</li>
+              <li>Agneta Air Park</li>
+              <li>Group Tours</li>
+              <li>Frequently Asked Questions</li>
+            </ul>
+          </div>
+        </li>
+        <li tabindex="0">
+          PROGRAMS
+          <div class="nav-dropdown">
+            <ul>
+              <li>Field Trips</li>
+              <li>Celebrations</li>
+              <li>Outreach</li>
+              <li>Research Library</li>
+            </ul>
+          </div>
+        </li>
+        <li tabindex="0">
+          ABOUT
+          <div class="nav-dropdown">
+            <ul>
+              <li>History of ESAM</li>
+              <li>Board of Trustees</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+        </li>
+        <li tabindex="0">
+          SUPPORT
+          <div class="nav-dropdown">
+            <ul>
+              <li>Donate</li>
+              <li>Become A Member</li>
+              <li>Become A Volunteer</li>
+              <li>Buy A Brick</li>
+            </ul>
+          </div>
+        </li>
+        <li tabindex="0">NEWS/MEDIA CENTER</li>
+      </ul>
+    </div>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Plan Your Visit</h1>
+        <p>
+          Whatever your age, the Empire State Aerosciences Museum has something
+          for you!
+        </p>
+      </div>
+      <div class="heroimg">
+        <div class="dark-filter"></div>
+      </div>
+    </section>
+
+    <section class="quick-links">
+      <div class="quick-content">
+        <h2>Quick Links</h2>
+        <ul class="quick">
+          <li>ESAM Events</li>
+          <li>Hours, Pricing & Directions</li>
+          <li>Museum Maps</li>
+          <li>Group Tours</li>
+          <li>Frequently Asked Questions</li>
+          <li>Research Library</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="info">
+      <div class="info-content-wrapper">
+        <div class="hours">
+          <div class="info-sub-head text-align-center">
+            <h3>SPRING HOURS</h3>
+            <p>Through Father's Day</p>
+          </div>
+          <div class="info-content">
+            <ul>
+              <li>Friday-Sunday</li>
+              <li>Monday-Thursday</li>
+            </ul>
+            <ul class="bold">
+              <li>10 a.m. - 4 p.m.</li>
+              <li class="text-align-end">Closed</li>
+            </ul>
+          </div>
+          <p class="info-bottom text-align-center">
+            The Museum is handicapped accessible and has ample parking for
+            busses and patrons on site.
+          </p>
+        </div>
+
+        <div class="prices">
+          <div class="info-sub-head text-align-center">
+            <h3>TICKET PRICES</h3>
+            <p>FREE admission to all current ESAM members</p>
+          </div>
+          <div class="info-content">
+            <ul>
+              <li>Adults</li>
+              <li>Seniors/Military</li>
+              <li>Children 6-16</li>
+              <li>Under 6</li>
+              <li id="srv-modal-link">SRV(per person)</li>
+            </ul>
+            <dialog class="srv-modal-wrapper" autofocus="false">
+              <div class="srv-modal">
+                <div class="srv-modal-left-col">
+                  <p>
+                    <span>SRV</span> stands for Simulated Reality Vehicle.
+                    Experience the wonders of flight without ever leaving the
+                    ground! Our SRV can accommodate approximately 15 riders on
+                    its 3 bench seats so its perfect for your entire family or
+                    group when they come to visit.
+                  </p>
+                  <div class="ride-price"><p>
+                    SRV Rides are <span>$5.00</span> per person</p>
+                    <p>
+                    Older
+                    children may ride unattended but it is recommended that
+                    small children be accompanied by an adult.
+                  </p></div>
+                </div>
+                <div class="srv-modal-right-col">
+                  <img
+                    src="./assets/srv_pic.webp"
+                    alt="simulated reality vehicle"
+                  />
+                  <p>
+                    Tickets for the SRV can be purchased upon entry to the
+                    museum or anytime during your visit to ESAM by visiting our
+                    gift shop.
+                  </p>
+                  <i class="fa-solid fa-rectangle-xmark close-icon"></i>
+                </div>
+              </div>
+            </dialog>
+            <ul class="bold">
+              <li>$8.00</li>
+              <li>$6.00</li>
+              <li>$5.00</li>
+              <li>FREE</li>
+              <li>$5.00</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="directions">
+      <img src="./assets/mapBG.png" alt="" />
+      <div class="directions-content">
+        <p><a href="https://maps.google.com/maps?ll=42.860308,-73.93233&z=15&t=m&hl=en&gl=US&mapclient=embed&cid=6595290117350800151" target="_blank">GET DIRECTIONS</a></p>
+      </div>
+      <div class="weather-content">
+        <div class="weather">
+          <p>Current weather at ESAM:</p>
+          <p class="date"></p>
+          <div class="icon-temp-wrapper">
+            <div class="icon">
+              <img src="" />
+            </div>
+            <div class="temp">&deg;F</div>
+          </div>
+          <div class="weather-condition"></div>
+          <p><a href="https://www.weatherapi.com/weather/q/schenectady-new-york-united-states-of-america-4005487" target="_blank">More on weatherapi.com</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tours">
+      <div class="tours-content text-align-center">
+        <h2>GROUP TOURS</h2>
+        <p>
+          The moment you arrive at the museum, you will be on a site that is
+          steeped in aviation history and where landmark advancements were made
+          in the aviation industry. The museum provides a variety of
+          educational, fun experiences for adults and youth, whether they come
+          for a tour, or combine it with a special program. We offer guided
+          tours for groups of 10 or more.
+        </p>
+        <a href="#"><button class="tours-btn">Plan Your Group Visit</button></a>
+      </div>
+      <div class="tours-gallery">
+        <div class="tours-gallery-image-wrapper">
+          <img
+            src=""
+            alt="gallery image 1"
+          />
+        </div>
+      </div>
+      <dialog class="tours-gallery-modal">
+        <i class="fa-solid fa-angles-left gallery-left-arr"></i>
+        <img src="" alt="full size gallery pic">
+        <i class="fa-solid fa-angles-right gallery-right-arr"></i>
+        <div class="tours-gallery-modal-thumbs-wrapper">
+          <img
+            src="./assets/toursGallery/image_1_sm.webp"
+            alt="gallery thumb 1"
+          />
+          <img
+            src="./assets/toursGallery/image_2_sm.webp"
+            alt="gallery thumb 2"
+          />
+          <img
+            src="./assets/toursGallery/image_3_sm.webp"
+            alt="gallery thumb 3"
+          />
+          <img
+            src="./assets/toursGallery/image_4_sm.webp"
+            alt="gallery thumb 4"
+          />
+          <img
+            src="./assets/toursGallery/image_5_sm.webp"
+            alt="gallery thumb 5"
+          />
+          <img
+            src="./assets/toursGallery/image_6_sm.webp"
+            alt="gallery thumb 6"
+          />
+          <img
+            src="./assets/toursGallery/image_7_sm.webp"
+            alt="gallery thumb 7"
+          />
+          <img
+            src="./assets/toursGallery/image_8_sm.webp"
+            alt="gallery thumb 8"
+          />
+        </div>
+      </dialog>
+    </section>
+
+    <section class="carousel">
+      <div class="carousel-slider">
+        <img
+          src="./assets/carouselImages/carousel_image_1.webp"
+          alt="airplane pic"
+        />
+        <img
+          src="./assets/carouselImages/carousel_image_2.webp"
+          alt="airplane pic"
+        />
+        <img
+          src="./assets/carouselImages/carousel_image_3.webp"
+          alt="airplane pic"
+        />
+        <img
+          src="./assets/carouselImages/carousel_image_4.webp"
+          alt="airplane pic"
+        />
+        <img
+          src="./assets/carouselImages/carousel_image_5.webp"
+          alt="airplane pic"
+        />
+        <img
+          src="./assets/carouselImages/carousel_image_6.webp"
+          alt="airplane pic"
+        />
+        <img
+          src="./assets/carouselImages/carousel_image_7.webp"
+          alt="airplane pic"
+        />
+        <img
+          src="./assets/carouselImages/carousel_image_8.webp"
+          alt="airplane pic"
+        />
+        <img
+          src="./assets/carouselImages/carousel_image_9.webp"
+          alt="airplane pic"
+        />
+        <img
+          src="./assets/carouselImages/carousel_image_10.webp"
+          alt="airplane pic"
+        />
+        <img
+          src="./assets/carouselImages/carousel_image_11.webp"
+          alt="airplane pic"
+        />
+        <img
+          src="./assets/carouselImages/carousel_image_12.webp"
+          alt="airplane pic"
+        />
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta-wrapper">
+        <div class="cta-logo">
+          <img
+            src="./assets/073ed1_8fe44decf5ab4f2fb88f95dfb4fb0594~mv2.png"
+            alt="ESAM logo"
+          />
+        </div>
+        <div class="cta-content">
+          <p>
+            Stay up to date on the latest events and add your name to our email
+            list.
+          </p>
+          <form class="cta-input-wrapper">
+            <input id='cta-email' type="email" placeholder="Email Address" required />
+            <button type="submit" class="cta-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-main">
+        <div class="footer-main-directions">
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.593679611725!2d-73.93490452420072!3d42.860312003351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89de6c21fad67fd1%3A0x5b872d6b1b56bb17!2sEmpire%20State%20Aerosciences%20Museum!5e0!3m2!1sen!2sus!4v1714432471025!5m2!1sen!2sus"
+              width="300"
+              height="200"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="address">
+            <div class="address-inner-wrapper text-align-center">
+              <p>250 Rudy Chase Drive</p>
+              <p>Glenville NY 12302</p>
+              <p>Phone: 518-377-2191</p>
+            </div>
+            <a href="https://maps.google.com/maps?ll=42.860308,-73.93233&z=15&t=m&hl=en&gl=US&mapclient=embed&cid=6595290117350800151" target="_blank"><button class="address-btn">Get Directions</button></a>
+          </div>
+        </div>
+        <div class="footer-main-hours-prices">
+          <div class="footer-main-hours-wrapper text-align-center">
+            <p class="accent-font letter-space bold">Spring Hours</p>
+            <p>Friday-Sunday: 10 a.m. - 4 p.m.</p>
+            <p>Monday-Thursday: Closed</p>
+          </div>
+          <div class="footer-main-prices-wrapper">
+            <h3 class="accent-font">TICKET PRICES</h3>
+
+            <div class="footer-main-prices-content">
+              <ul>
+                <li>Adults</li>
+                <li>Seniors/Military</li>
+                <li>Children 6-16</li>
+                <li>Under 6</li>
+                <li>Members</li>
+                <li id="footer-main-srv-modal-link">SRV(per person)</li>
+              </ul>
+              <ul class="semi-bold">
+                <li>$8.00</li>
+                <li>$6.00</li>
+                <li>$5.00</li>
+                <li>FREE</li>
+                <li>FREE</li>
+                <li>$5.00</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <nav>
+          <ul>
+            <li tabindex="0">
+              VISIT
+              <div class="nav-dropdown">
+                <ul>
+                  <li>Hours, Pricing & Directions</li>
+                  <li>Events at ESAM</li>
+                  <li>Museum Maps</li>
+                  <li>Agneta Air Park</li>
+                  <li>Group Tours</li>
+                  <li>Frequently Asked Questions</li>
+                </ul>
+              </div>
+            </li>
+            <li tabindex="0">
+              PROGRAMS
+              <div class="nav-dropdown">
+                <ul>
+                  <li>Field Trips</li>
+                  <li>Celebrations</li>
+                  <li>Outreach</li>
+                  <li>Research Library</li>
+                </ul>
+              </div>
+            </li>
+            <li tabindex="0">
+              ABOUT
+              <div class="nav-dropdown">
+                <ul>
+                  <li>History of ESAM</li>
+                  <li>Board of Trustees</li>
+                  <li>Contact Us</li>
+                </ul>
+              </div>
+            </li>
+            <li tabindex="0">
+              SUPPORT
+              <div class="nav-dropdown">
+                <ul>
+                  <li>Donate</li>
+                  <li>Become A Member</li>
+                  <li>Become A Volunteer</li>
+                  <li>Buy A Brick</li>
+                </ul>
+              </div>
+            </li>
+            <li>NEWS/MEDIA CENTER</li>
+          </ul>
+          <ul>
+            <li id="contact-modal-link">Contact ESAM &#9660</li>
+            <dialog class="contact-modal-wrapper">
+              <div class="contact-modal">
+                <img src="./assets/footer_contact_modal_pic.webp" alt="" />
+                <div class="contact-modal-content">
+                  <p>CONTACT ESAM</p>
+                  <div class="contact-modal-contact-info">
+                    <div class="contact-modal-contact-info-top">
+                      <p>Tel: 518-377-2191</p>
+                      <p>Fax: 518-377-1959</p>
+                    </div>
+                    <div class="contact-modal-contact-info-bottom">
+                      <p>250 Rudy Chase Drive</p>
+                      <p>Glenville, New York 12302</p>
+                    </div>
+                  </div>
+                  <form action="#" method="dialog" class="contact-modal-form">
+                    <input type="text" name="name" placeholder="Name *" required />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email *"
+                      pattern="^[^@]+@[^@]+\.[^@]+$"
+                      required
+                    />
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      placeholder="Phone"
+                      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    />
+                    <input type="text" name="subject" placeholder="Subject" />
+                    <textarea
+                      name="message"
+                      placeholder="Message *"
+                      rows="7"
+                      required
+                    ></textarea>
+                    <button class="contact-modal-button" type="submit">SEND</button>
+                  </form>
+                </div>
+                <i class="fa-regular fa-rectangle-xmark contact-close-icon"></i>
+              </div>
+            </dialog>
+            <li>
+              <img src="./assets/icon_facebook.png" alt="ESAM on facebook" />
+            </li>
+            <li>
+              <img src="./assets/icon_youtube.png" alt="ESAM on Youtube" />
+            </li>
+            <li>
+              <img src="./assets/icon_twitter.png" alt="ESAM on Twitter" />
+            </li>
+            <li><img src="./assets/icon_yelp.png" alt="ESAM on Yelp" /></li>
+            <li>
+              <img
+                src="./assets/icon_trip_advisor.png"
+                alt="ESAM on Trip Advisor"
+              />
+            </li>
+          </ul>
+        </nav>
+        <h6>--- page coded by Steve Majewski for practice ---</h6>
+      </div>
+    </footer>
+  </body>
+</html>

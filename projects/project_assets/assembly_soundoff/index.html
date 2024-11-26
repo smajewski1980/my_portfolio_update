@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assembly Sound Off (the floor)</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/Seal_of_the_New_York_State_Assembly.svg"
+      type="image/x-icon"
+    />
+    <script src="./scriptBeats.js" defer></script>
+    <script src="./scriptSounds.js" defer></script>
+    <script src="./scriptVoices.js" defer></script>
+    <script src="./scriptButtonColors.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/4a08b1e9c6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <p class="title">Assembly Sound Off <span>(the floor)</span></p>
+    <div class="master-control">
+      <div class="logo">
+        <p class="adjourned-text">ADJOURNED!</p>
+        <img
+          src="./images/Seal_of_the_New_York_State_Assembly.svg"
+          alt="Assembly Seal"
+        />
+      </div>
+      <p>Press the seal to stop the beat.</p>
+    </div>
+    <div class="sound-effects">
+      <button class="btn-sound-effect" data-sound-effect="soundGavelSingle">
+        <i class="fa-solid fa-gavel"></i> <span>GAVEL</span>
+      </button>
+      <button class="btn-sound-effect" data-sound-effect="penClick">
+        <i class="fa-solid fa-pen-fancy"></i>
+        <span>PEN CLICK</span>
+      </button>
+      <button class="btn-sound-effect" data-sound-effect="clap">
+        <i class="fa-solid fa-hands-clapping"></i>
+        <span>CLAP</span>
+      </button>
+      <button class="btn-sound-effect" data-sound-effect="soundVoteBell">
+        <i class="fa-solid fa-bell"></i>
+        <span>VOTE BELL</span>
+      </button>
+      <button class="btn-sound-effect" data-sound-effect="soundGavelTriple">
+        <i class="fa-solid fa-gavel"></i>
+        <i class="fa-solid fa-gavel"></i>
+        <i class="fa-solid fa-gavel"></i> <span>GAVEL</span>
+      </button>
+    </div>
+    <div class="beats">
+      <button class="btn-beat" data-beat="beat1">
+        <i class="fa-solid fa-drum"></i>
+        BEAT 1
+      </button>
+      <button class="btn-beat" data-beat="beat2">
+        <i class="fa-solid fa-drum"></i> BEAT 2
+      </button>
+      <button class="btn-beat" data-beat="beat3">
+        <i class="fa-solid fa-drum"></i> BEAT 3
+      </button>
+      <button class="btn-beat" data-beat="beat4">
+        <i class="fa-solid fa-drum"></i> BEAT 4
+      </button>
+      <button class="btn-beat" data-beat="beat5">
+        <i class="fa-solid fa-drum"></i> BEAT 5
+      </button>
+    </div>
+    <div class="speech-samples">
+      <button class="btn-speech-samples" data-voice="aubryBillPassed">
+        <img
+          src="./images/faces/aubry.webp"
+          data-voice="aubryBillPassed"
+          alt=""
+        />
+        The Bill Is Passed
+      </button>
+      <button class="btn-speech-samples" data-voice="crystalHouseToOrder">
+        <img
+          src="./images/faces/crystal.webp"
+          data-voice="crystalHouseToOrder"
+          alt=""
+        />
+        Call The House <br />To Order
+      </button>
+      <button class="btn-speech-samples" data-voice="goodellSponsor">
+        <img
+          src="./images/faces/goodell.webp"
+          data-voice="goodellSponsor"
+          alt=""
+        />
+        Sponsor
+      </button>
+      <button class="btn-speech-samples" data-voice="palmesanoCongo">
+        <img
+          src="./images/faces/palmesano.webp"
+          data-voice="palmesanoCongo"
+          alt=""
+        />
+        The Congo
+      </button>
+      <button class="btn-speech-samples" data-voice="heastieSonOfTheBronx">
+        <img
+          src="./images/faces/heastie.webp"
+          data-voice="heastieSonOfTheBronx"
+          alt=""
+        />Son Of The Bronx
+      </button>
+      <button class="btn-speech-samples" data-voice="aubryRecordVote">
+        <img
+          src="./images/faces/aubry.webp"
+          data-voice="aubryRecordVote"
+          alt=""
+        />
+        Record The Vote
+      </button>
+      <button class="btn-speech-samples" data-voice="crystalMrSpeaker">
+        <img
+          src="./images/faces/crystal.webp"
+          data-voice="crystalMrSpeaker"
+          alt=""
+        />
+        Mr. Speaker
+      </button>
+      <button class="btn-speech-samples" data-voice="goodellMrSpeaker">
+        <img
+          src="./images/faces/goodell.webp"
+          data-voice="goodellMrSpeaker"
+          alt=""
+        />
+        Mr. Speaker
+      </button>
+      <button class="btn-speech-samples" data-voice="palmesanoBillionWithAB">
+        <img
+          src="./images/faces/palmesano.webp"
+          data-voice="palmesanoBillionWithAB"
+          alt=""
+        />
+        Billion With A "B"
+      </button>
+      <button class="btn-speech-samples" data-voice="heastieHipHop">
+        <img
+          src="./images/faces/heastie.webp"
+          data-voice="heastieHipHop"
+          alt=""
+        />Hip Hop
+      </button>
+    </div>
+    <script>
+      const resetButton = document.querySelector(".logo img");
+      const aubryAdjourned = new Audio("./sounds/voice/aubryAdjourned.mp3");
+      const adjournedText = document.querySelector(".adjourned-text");
+      resetButton.addEventListener("click", () => {
+        icon.classList.remove("beats-button-playing");
+        function textFlyIn() {
+          adjournedText.classList.toggle("adjourned-text-reveal");
+          setTimeout(() => {
+            adjournedText.classList.toggle("adjourned-text-reveal");
+          }, 1000);
+        }
+        if (currentlyPlayingBeat) {
+          currentlyPlayingBeat.load();
+          aubryAdjourned.play();
+          textFlyIn();
+        } else {
+          aubryAdjourned.play();
+          textFlyIn();
+        }
+      });
+    </script>
+  </body>
+</html>
