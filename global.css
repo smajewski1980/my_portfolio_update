@@ -19,7 +19,6 @@ body {
   background-image: url(./assets/bgs/numsBackgroundImage.png);
   color: var(--font-fallback);
   font-weight: bold;
-
   font-family: "RocherColorGX", system-ui, "Segoe UI", "Open Sans",
     "Helvetica Neue", sans-serif;
 }
@@ -160,12 +159,10 @@ a:visited {
   .heading-wrapper {
     display: grid;
     left: 50%;
-    opacity: 1;
     position: absolute;
     rotate: 0deg;
     top: 2rem;
-    transform: scale(1) translateX(-50%);
-    transition: none;
+    transform: translateX(-50%);
   }
   .heading-word {
     display: flex;
