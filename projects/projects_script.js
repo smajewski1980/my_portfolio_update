@@ -1,11 +1,7 @@
 const descTitle = document.querySelector(".desc-title");
 const desc = document.querySelector(".desc");
 const cards = Array.from(document.getElementsByClassName("card"));
-const spotlight = document.querySelector(".spotlight");
-const descriptionTitle = document.querySelector(".desc-title");
-const description = document.querySelector(".desc");
-let infoVisible = false;
-let infoTimeout;
+
 const descriptions = [
   {
     title: "Cleaning Shellac 78s",
@@ -37,55 +33,53 @@ const descriptions = [
   },
 ];
 
-function showDescription() {
-  if (infoTimeout) {
-    clearInterval(infoTimeout);
-  }
-  spotlight.style.filter = "blur(35px) brightness(0.5)";
-  const thisCard = this.dataset.card;
-  const thisDesc = descriptions[parseInt(thisCard) - 1];
-  descTitle.textContent = thisDesc.title;
-  desc.innerHTML = thisDesc.desc;
-  if (!infoVisible) {
-    descTitle.classList.toggle("show-description");
-    desc.classList.toggle("show-description");
-    infoVisible = true;
-  }
-}
+// function showDescription() {
+//   if (infoTimeout) {
+//     clearInterval(infoTimeout);
+//   }
+//   spotlight.style.filter = "blur(35px) brightness(0.5)";
+//   const thisCard = this.dataset.card;
+//   const thisDesc = descriptions[parseInt(thisCard) - 1];
+//   descTitle.textContent = thisDesc.title;
+//   desc.innerHTML = thisDesc.desc;
+//   if (!infoVisible) {
+//     descTitle.classList.toggle("show-description");
+//     desc.classList.toggle("show-description");
+//     infoVisible = true;
+//   }
+// }
 
-function hideDescription() {
-  infoTimeout = setTimeout(() => {
-    spotlight.style.filter = "blur(35px) brightness(1)";
-    descTitle.classList.toggle("show-description");
-    desc.classList.toggle("show-description");
-    descTitle.textContent = "";
-    desc.textContent = "";
-    infoVisible = false;
-  }, 100);
-}
+// function hideDescription() {
+//   infoTimeout = setTimeout(() => {
+//     spotlight.style.filter = "blur(35px) brightness(1)";
+//     descTitle.classList.toggle("show-description");
+//     desc.classList.toggle("show-description");
+//     descTitle.textContent = "";
+//     desc.textContent = "";
+//     infoVisible = false;
+//   }, 100);
+// }
 
-if (getInnerWidth() >= 1200) {
-  cards.forEach((card) => {
-    card.addEventListener("mouseover", showDescription);
-    card.addEventListener("mouseout", hideDescription);
-  });
-}
+// if (getInnerWidth() >= 1200) {
+//   cards.forEach((card) => {
+//     card.addEventListener("mouseover", showDescription);
+//     card.addEventListener("mouseout", hideDescription);
+//   });
+// }
 
-if (getInnerWidth() < 1200) {
-  cards.forEach((card, index) => {
-    const title = descriptions[index].title;
-    const desc = descriptions[index].desc;
-    const newDiv = () => document.createElement("div");
-    const infoDiv = newDiv();
-    infoDiv.classList.add("sm-scr-card-info");
-    const titleDiv = newDiv();
-    titleDiv.classList.add("sm-title");
-    titleDiv.textContent = title;
-    const descDiv = newDiv();
-    descDiv.classList.add("sm-desc");
-    descDiv.innerHTML = desc;
-    infoDiv.appendChild(titleDiv);
-    infoDiv.appendChild(descDiv);
-    card.prepend(infoDiv);
-  });
-}
+cards.forEach((card, index) => {
+  const title = descriptions[index].title;
+  const desc = descriptions[index].desc;
+  const newDiv = () => document.createElement("div");
+  const infoDiv = newDiv();
+  infoDiv.classList.add("sm-scr-card-info");
+  const titleDiv = newDiv();
+  titleDiv.classList.add("sm-title");
+  titleDiv.textContent = title;
+  const descDiv = newDiv();
+  descDiv.classList.add("sm-desc");
+  descDiv.innerHTML = desc;
+  infoDiv.appendChild(titleDiv);
+  infoDiv.appendChild(descDiv);
+  card.prepend(infoDiv);
+});
