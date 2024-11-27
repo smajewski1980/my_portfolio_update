@@ -57,6 +57,16 @@
   padding-left: 1rem;
   padding-right: auto;
   transform: translateX(calc(-125px + -1rem));
+  position: relative;
+}
+.card-wrapper::after {
+  content: "";
+  position: absolute;
+  outline: 2px solid rgb(255, 0, 225);
+  outline-offset: 0.5rem;
+  width: 250px;
+  height: 187px;
+  left: 1rem;
 }
 .card {
   /* align-content: end; */
@@ -94,10 +104,10 @@
   cursor: pointer;
 }
 
-.card-wrapper .card-snap {
+.card-snap {
   scroll-snap-align: start;
-  outline: 2px solid rgb(255, 0, 225);
-  outline-offset: 0.5rem;
+  /* outline: 2px solid rgb(255, 0, 225); */
+  /* outline-offset: 0.5rem; */
 }
 
 .proj-card-img-wrapper img {
