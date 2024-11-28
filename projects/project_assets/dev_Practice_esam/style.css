@@ -332,6 +332,7 @@ h3 {
 
 .info-bottom {
   width: 40ch;
+  margin-inline: auto;
 }
 
 .hours,

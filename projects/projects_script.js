@@ -31,7 +31,10 @@ const descriptions = [
     desc: "A Frontend Mentor project.</br>This one includes a section with tabs that switch content and a faq accordion.",
   },
 ];
+const descTitle = document.querySelector(".desc-title");
+const desc = document.querySelector(".desc");
 let currentCard = 1;
+let moving = false;
 
 function removeSnapClass() {
   cards.forEach((card, index) => {
@@ -39,23 +42,40 @@ function removeSnapClass() {
   });
 }
 
-function addSnapClass(card) {
+function addSnapClass() {
   removeSnapClass();
   cards[currentCard - 1].classList.add("card-snap");
 }
 
 function prevCard() {
-  if (currentCard > 1) {
+  if (currentCard > 1 && !moving) {
     currentCard--;
+    moving = true;
+    setTimeout(() => {
+      moving = false;
+    }, 500);
     addSnapClass();
+    populateInfoFields();
   }
 }
 function nextCard() {
-  if (currentCard < 7) {
+  if (currentCard < 7 && !moving) {
     currentCard++;
+    moving = true;
+    setTimeout(() => {
+      moving = false;
+    }, 500);
     addSnapClass();
+    populateInfoFields();
   }
+}
+
+function populateInfoFields() {
+  descTitle.textContent = descriptions[currentCard - 1].title;
+  desc.innerHTML = descriptions[currentCard - 1].desc;
 }
 
 btnPrev.addEventListener("click", prevCard);
 btnNext.addEventListener("click", nextCard);
+
+populateInfoFields();
