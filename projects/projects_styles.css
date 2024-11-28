@@ -42,7 +42,7 @@
   bottom: 15rem;
   width: calc(50vw + (125px + var(--gap-spacer)));
   transform: translateX(calc(-125px + (var(--gap-spacer) * -1)));
-  mask-image: linear-gradient(to right, black 30%, transparent 95%);
+  mask-image: linear-gradient(to right, black 30%, transparent 90%);
 }
 .cards-inner-wrapper {
   display: flex;
