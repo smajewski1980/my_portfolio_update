@@ -73,8 +73,8 @@ main {
   .bio-image-wrapper {
     left: 0;
     position: relative;
-    top: 5rem;
-    width: 80vw;
+    top: 3.5rem;
+    width: 50vw;
   }
   .bio-image-wrapper img {
     width: 100%;
@@ -83,17 +83,24 @@ main {
     content: "";
     inset: 0;
     position: absolute;
+  }
+  .bio-text p {
+    text-align: center;
+  }
 
-    background-image: linear-gradient(
+  /* background-image: linear-gradient(
       to top,
       rgba(0, 0, 0, 1),
       rgba(0, 0, 0, 0.8) 40%,
       rgba(0, 0, 0, 0.5) 50%,
       transparent 100%
-    );
+    ); */
+
+  .bio-image-wrapper {
+    mask-image: linear-gradient(black 60%, transparent 60%);
   }
   .bio-text {
-    margin-top: -175px;
+    margin-top: -160px;
   }
 }
 @media screen and (width < 650px) {
@@ -101,10 +108,7 @@ main {
     padding-inline: 1rem;
   }
   .bio-image-wrapper {
-    margin: 0;
     top: 2rem;
-  }
-  .bio-text p {
-    text-align: center;
+    width: 80vw;
   }
 }

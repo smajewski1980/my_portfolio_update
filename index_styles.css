@@ -55,7 +55,10 @@ li:nth-of-type(3):focus-visible {
 }
 @media screen and (width > 2200px) {
   body {
-    background-position: 0 -200px;
+    background-position: 0 -225px;
+  }
+  li {
+    margin-bottom: 1.5rem;
   }
 }
 @media screen and (width < 1000px) {
