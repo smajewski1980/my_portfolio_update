@@ -109,6 +109,9 @@ footer {
   }
 }
 @media screen and (width < 1200px) {
+  .merry-go-round-wrapper {
+    scale: 0.5;
+  }
   footer p {
     -webkit-user-select: none;
     user-select: none;

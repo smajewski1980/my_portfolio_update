@@ -1,3 +1,7 @@
+:root {
+  --gap-spacer: 1rem;
+}
+
 .page-title-wrapper {
   rotate: 20deg;
   top: 10%;
@@ -39,13 +43,11 @@
 }
 
 .card-wrapper {
-  --gap-spacer: 1rem;
   position: absolute;
   left: 50vw;
   bottom: 15rem;
   width: calc(50vw + (125px + var(--gap-spacer)));
   transform: translateX(calc(-125px + (var(--gap-spacer) * -1)));
-  mask-image: linear-gradient(to right, black 30%, transparent 90%);
 }
 .cards-inner-wrapper {
   display: flex;
@@ -57,6 +59,13 @@
   padding-block: 1rem;
   padding-left: var(--gap-spacer);
   padding-right: auto;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 2%,
+    black 30%,
+    transparent 90%
+  );
 }
 .card-wrapper::before {
   content: "";
@@ -68,6 +77,7 @@
   left: 1rem;
   top: 1rem;
   border-radius: 15px;
+  /* z-index: 99; */
 }
 
 /* .card-wrapper::after {
@@ -87,6 +97,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 187px;
+  /* z-index: 999; */
   /* outline: 2px solid lime; */
 }
 
@@ -171,24 +182,28 @@
   }
 }
 
-@media screen and (width < 1150px) {
-  .graphic-design-wrapper {
-    left: 5%;
-    top: 25rem;
+@media screen and (width < 1400px) {
+  .picture-frames-wrapper {
+    left: 5rem;
   }
-  .portrait-wrapper {
-    left: 5%;
-    top: 15rem;
+}
+
+@media screen and (width < 1150px) {
+  .picture-frames-wrapper {
+    left: 3rem;
+    bottom: 6rem;
   }
   .card-wrapper {
-    mask-image: linear-gradient(to right, black 30%, transparent 90%);
+    mask-image: linear-gradient(
+      to right,
+      black 30%,
+      black 90%,
+      transparent 100%
+    );
+    bottom: 4rem;
   }
   .info-wrapper {
     top: 9rem;
-  }
-  .card-wrapper {
-    bottom: 4rem;
-    mask-image: linear-gradient(to right, black 30%, transparent 80%);
   }
   .scroll-controls {
     bottom: 0rem;
