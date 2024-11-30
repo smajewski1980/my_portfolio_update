@@ -56,6 +56,10 @@ function prevCard() {
     }, 500);
     addSnapClass();
     populateInfoFields();
+    btnNext.classList.remove("inactive-control");
+    if (currentCard === 1) {
+      btnPrev.classList.add("inactive-control");
+    }
   }
 }
 function nextCard() {
@@ -67,6 +71,10 @@ function nextCard() {
     }, 500);
     addSnapClass();
     populateInfoFields();
+    btnPrev.classList.remove("inactive-control");
+    if (currentCard === 7) {
+      btnNext.classList.add("inactive-control");
+    }
   }
 }
 

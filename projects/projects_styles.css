@@ -129,6 +129,11 @@
   letter-spacing: 10px;
 }
 
+.inactive-control {
+  filter: saturate(0.5) brightness(0.5);
+  pointer-events: none;
+}
+
 .card-snap {
   scroll-snap-align: start;
 }
