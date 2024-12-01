@@ -221,26 +221,17 @@
   .picture-frames-wrapper {
     left: 50%;
     transform: translateX(-50%);
-    bottom: 18rem;
+    top: 6rem;
   }
   .info-wrapper {
     text-wrap: wrap;
     line-height: 1.1;
     /* outline: 2px solid lime; */
     width: 90vw;
-    top: 6rem;
+    top: 13rem;
   }
 }
 @media screen and (width < 750px) {
-  .picture-frames-wrapper {
-    bottom: 16rem;
-  }
-  /* .picture-frames-wrapper > * {
-    width: 5rem;
-  } */
-  .info-wrapper {
-    top: 5rem;
-  }
   .cards-inner-wrapper {
     mask-image: linear-gradient(
       to right,
@@ -249,10 +240,9 @@
       black 250px,
       transparent 95%
     );
-    /* bottom: 3rem; */
   }
   .card-wrapper {
-    bottom: 2.5rem;
+    bottom: 3rem;
   }
   .scroll-controls {
     bottom: 0rem;
