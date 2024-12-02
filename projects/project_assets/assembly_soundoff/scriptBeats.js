@@ -8,12 +8,10 @@ const beats = [beat1, beat2, beat3, beat4, beat5];
 
 beats.forEach((beat) => {
   beat.loop = true;
-  if (!beat.dataset.beat === "beat4") {
-    beat.volume = 0.5;
-  } else {
-    beat.volume = 0.15;
-  }
+  beat.volume = 0.5;
 });
+beat4.volume = 0.25;
+beat5.volume = 0.25;
 
 const beatButtons = document.querySelectorAll(".btn-beat");
 
