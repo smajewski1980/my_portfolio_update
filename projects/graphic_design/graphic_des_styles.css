@@ -34,6 +34,7 @@ body {
   inset: 0;
   position: absolute;
   transform-style: preserve-3d;
+
   transform: rotateY(
       calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
     )

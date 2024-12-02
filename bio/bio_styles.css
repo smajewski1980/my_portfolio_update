@@ -87,7 +87,12 @@ main {
   .bio-text p {
     text-align: center;
   }
-
+  .bio-image-wrapper {
+    mask-image: linear-gradient(black 60%, transparent 60%);
+  }
+  .bio-text {
+    margin-top: -160px;
+  }
   /* background-image: linear-gradient(
       to top,
       rgba(0, 0, 0, 1),
@@ -95,13 +100,6 @@ main {
       rgba(0, 0, 0, 0.5) 50%,
       transparent 100%
     ); */
-
-  .bio-image-wrapper {
-    mask-image: linear-gradient(black 60%, transparent 60%);
-  }
-  .bio-text {
-    margin-top: -160px;
-  }
 }
 @media screen and (width < 650px) {
   main {

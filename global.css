@@ -19,6 +19,7 @@ body {
   background-image: url(./assets/bgs/numsBackgroundImage.png);
   color: var(--font-fallback);
   font-weight: bold;
+
   font-family: "RocherColorGX", system-ui, "Segoe UI", "Open Sans",
     "Helvetica Neue", sans-serif;
 }
@@ -77,12 +78,6 @@ a:visited {
   display: block;
   margin-top: 1rem;
   rotate: 15deg;
-}
-@keyframes home-btn-move {
-  to {
-    left: 4.1%;
-    top: 7.1%;
-  }
 }
 .pages-flame-wrapper {
   bottom: 5rem;
@@ -150,11 +145,6 @@ a:visited {
     rotate: 10deg;
   }
 }
-@media screen and (width < 1200px) {
-  .pages-flame-wrapper {
-    bottom: 2rem;
-  }
-}
 @media screen and (width < 1000px) {
   .heading-wrapper {
     display: grid;
@@ -166,7 +156,6 @@ a:visited {
   }
   .heading-word {
     display: flex;
-    /* font-size: 6vw; */
     letter-spacing: 2px;
     line-height: 1.1;
   }
