@@ -37,7 +37,7 @@ let currentCard = 1;
 let moving = false;
 
 function removeSnapClass() {
-  cards.forEach((card, index) => {
+  cards.forEach((card) => {
     card.classList.remove("card-snap");
   });
 }

@@ -96,8 +96,7 @@
 }
 
 .card:not(.card-spacer) {
-  /* background: rgba(124, 20, 153, 0.3); */
-  background: rgba(124, 20, 153);
+  background: rgba(124, 20, 153, 0.4);
 }
 
 .scroll-controls {
