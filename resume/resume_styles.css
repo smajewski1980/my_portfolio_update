@@ -1,5 +1,5 @@
 .icons-wrapper {
-  bottom: 12%;
+  bottom: 5rem;
   column-gap: 2.5rem;
   display: grid;
   grid-template-columns: repeat(14, 1fr);
@@ -34,7 +34,7 @@
 }
 @media screen and (width < 1700px) {
   .icons-wrapper {
-    bottom: 5%;
+    bottom: 3rem;
   }
   .resume-img-wrapper img {
     width: 18rem;
