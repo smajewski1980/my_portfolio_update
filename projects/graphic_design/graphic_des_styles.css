@@ -8,6 +8,7 @@ body {
   --spin-anim-tim: 120s;
   height: 100vh;
   position: relative;
+  scale: 0.75;
   text-align: center;
   width: 100%;
   z-index: 5;
@@ -98,11 +99,6 @@ footer {
   position: absolute;
   transform: translatex(-50%);
 }
-@media screen and (width < 1700px) {
-  .merry-go-round-wrapper {
-    scale: 0.75;
-  }
-}
 @media screen and (width >= 1200px) {
   .merry-go-round-inner-wrapper:hover,
   .merry-go-round-inner-wrapper:hover .gd-portrait-wrapper {
@@ -121,9 +117,6 @@ footer {
 @media screen and (width < 1000px) {
   body {
     overflow: hidden;
-  }
-  .merry-go-round-wrapper {
-    scale: 0.5;
   }
 }
 @media screen and (width < 650px) {
