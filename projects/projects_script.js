@@ -19,12 +19,12 @@ const descriptions = [
     desc: "Built with React.js, it is my current catalog and is a work in progress.</br>This one includes a 10x10 storage unit with all of this music inside.",
   },
   {
-    title: "Cleaning Shellac 78s",
-    desc: "A Codecademy project that will remain online as a collector's resource.",
+    title: "Product List With Cart",
+    desc: "A Frontend Mentor project of an interactive product shopping cart,</br>which has a responsive layout and an order confirmation modal.",
   },
   {
-    title: "My Music Catalog v1",
-    desc: "Version one was made before I knew any Javascript.</br>I exported PDFs from my database and embedded them in iframes.",
+    title: "Cleaning Shellac 78s",
+    desc: "A Codecademy project that will remain online as a collector's resource.",
   },
   {
     title: "Bookmark Landing Page",
