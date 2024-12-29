@@ -23,8 +23,8 @@ const descriptions = [
     desc: "A Frontend Mentor project of an interactive product shopping cart,</br>which has a responsive layout and an order confirmation modal.",
   },
   {
-    title: "Cleaning Shellac 78s",
-    desc: "A Codecademy project that will remain online as a collector's resource.",
+    title: "My Trivia App",
+    desc: "I searched a list of free APIs and made this to practice working with fetched API data.",
   },
   {
     title: "Bookmark Landing Page",
