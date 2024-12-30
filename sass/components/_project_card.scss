@@ -1,0 +1,33 @@
+.card {
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 187px;
+  min-width: 250px;
+  position: relative;
+  text-align: center;
+
+  &:not(.card-spacer) {
+    background: rgba(124, 20, 153, 0.4);
+  }
+
+  .proj-card-img-wrapper img {
+    border-radius: 15px 15px 0 0;
+  }
+
+  .card-icons-wrapper {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 0.5rem;
+  }
+
+  .link {
+    inset: 0;
+    position: absolute;
+    z-index: 99;
+  }
+}

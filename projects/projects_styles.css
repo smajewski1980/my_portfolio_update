@@ -1,11 +1,8 @@
-:root {
-  --gap-spacer: 1rem;
-}
-.page-title-wrapper {
+/* .page-title-wrapper {
   rotate: 20deg;
   top: 10%;
-}
-.picture-frames-wrapper {
+} */
+/* .picture-frames-wrapper {
   bottom: 17rem;
   display: flex;
   gap: 1rem;
@@ -14,16 +11,16 @@
 }
 .picture-frames-wrapper > * {
   width: 10rem;
-}
-.info-wrapper {
+} */
+/* .info-wrapper {
   left: 50%;
   position: absolute;
   text-align: center;
   text-wrap: nowrap;
   top: 13rem;
   transform: translateX(-50%);
-}
-.desc-title {
+} */
+/* .desc-title {
   font-size: clamp(1.25rem, 2vw, 2.5em);
   font-variation-settings: "SHDW" 80, "BVEL" 70;
   letter-spacing: 5px;
@@ -35,21 +32,23 @@
   letter-spacing: 2px;
   line-height: 1.4;
   top: 8.5em;
-}
-.card-wrapper {
+} */
+/* .card-wrapper {
+  --gap-spacer: 1rem;
   bottom: 15rem;
   left: 50vw;
   position: absolute;
   transform: translateX(calc(-125px + (var(--gap-spacer) * -1)));
   width: calc(50vw + (125px + var(--gap-spacer)));
-}
-.cards-inner-wrapper {
+} */
+
+/* .cards-inner-wrapper {
   display: flex;
   gap: var(--gap-spacer);
   mask-image: linear-gradient(
     to right,
     transparent,
-    black 2%,
+    black 1%,
     black 30%,
     transparent 90%
   );
@@ -58,10 +57,11 @@
   padding-left: var(--gap-spacer);
   padding-right: auto;
   scroll-behavior: smooth;
-  scroll-padding: 1rem;
+  scroll-padding: 0.5rem;
   scroll-snap-type: x mandatory;
-}
-.card-wrapper::before {
+  margin-left: 0.5rem;
+} */
+/* .card-wrapper::before {
   border-radius: 15px;
   content: "";
   height: 187px;
@@ -73,8 +73,8 @@
   top: 1rem;
   width: 250px;
   z-index: 99;
-}
-.card {
+} */
+/* .card {
   border-radius: 15px;
   cursor: pointer;
   display: flex;
@@ -83,11 +83,11 @@
   min-width: 250px;
   position: relative;
   text-align: center;
-}
-.card:not(.card-spacer) {
+} */
+/* .card:not(.card-spacer) {
   background: rgba(124, 20, 153, 0.4);
-}
-.scroll-controls {
+} */
+/* .scroll-controls {
   bottom: 9rem;
   display: flex;
   font-size: 2.5rem;
@@ -109,29 +109,30 @@
 .inactive-control {
   filter: saturate(0.5) brightness(0.5);
   pointer-events: none;
-}
-.card-snap {
+} */
+/* .card-snap {
   scroll-snap-align: start;
-}
-.proj-card-img-wrapper img {
+} */
+
+/* .proj-card-img-wrapper img {
   border-radius: 15px 15px 0 0;
-}
-.card-icons-wrapper {
+} */
+/* .card-icons-wrapper {
   align-items: center;
   display: flex;
   gap: 1rem;
   justify-content: center;
   margin: auto;
   padding-bottom: 1rem;
-}
-.icon {
+} */
+/* .icon {
   width: 40px;
-}
-.link {
+} */
+/* .link {
   inset: 0;
   position: absolute;
   z-index: 99;
-}
+} */
 
 @media screen and (width < 1700px) {
   .picture-frames-wrapper {
