@@ -132,6 +132,7 @@ body {
     rotate: 10deg;
   }
 }
+
 @media screen and (width < 1000px) {
   .heading-wrapper {
     display: grid;
@@ -140,22 +141,26 @@ body {
     rotate: 0deg;
     top: 1rem;
     transform: translateX(-50%);
-  }
-  .heading-word {
-    display: flex;
-    letter-spacing: 2px;
-    line-height: 1.1;
-  }
-  .heading-word:first-child {
-    transform: translateX(2vw);
-  }
-  .heading-word > * {
-    rotate: 0deg;
+
+    .heading-word {
+      display: flex;
+      letter-spacing: 2px;
+      line-height: 1.1;
+
+      > * {
+        rotate: 0deg;
+      }
+
+      &:first-child {
+        transform: translateX(2vw);
+      }
+    }
   }
   .page-title-wrapper {
     display: none;
   }
 }
+
 @media screen and (width < 650px) {
   .page-title-wrapper {
     right: 1.5rem;
