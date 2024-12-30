@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "RocherColorGX";
+  line-gap-override: 85%;
+  src: url("../../assets/font/RocherColorGX-purple3.woff2")
+    format("woff2-variations");
+}
+
+body {
+  color: var(--font-fallback);
+  font-weight: bold;
+  font-family: "RocherColorGX", system-ui, "Segoe UI", "Open Sans",
+    "Helvetica Neue", sans-serif;
+}

@@ -1,25 +1,26 @@
-body {
+/* body {
   background-image: url("./assets/bgs/bgImage.png");
   background-size: cover;
-}
-.heading-wrapper {
+} */
+/* .home-heading-wrapper {
   display: grid;
-  font-size: 5vw;
   font-variation-settings: "SHDW" 35, "BVEL" 85;
-  left: 7%;
-  pointer-events: none;
   position: absolute;
   rotate: -15deg;
+
+  font-size: 5vw;
+  left: 7%;
+  pointer-events: none;
   top: 8%;
-}
-.heading-word {
+} */
+/* .heading-word {
   display: flex;
   letter-spacing: 20px;
   line-height: 1.3;
 }
 .heading-word > * {
   rotate: 15deg;
-}
+} */
 nav {
   bottom: 10%;
   left: 17%;

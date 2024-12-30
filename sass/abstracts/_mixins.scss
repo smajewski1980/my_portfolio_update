@@ -1,0 +1,6 @@
+@mixin heading-wrapper() {
+  display: grid;
+  font-variation-settings: "SHDW" 35, "BVEL" 85;
+  position: absolute;
+  rotate: -15deg;
+}
