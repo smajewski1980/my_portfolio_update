@@ -1,0 +1,78 @@
+.resume-img-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  font-variation-settings: "SHDW" 0, "BVEL" 0;
+  gap: 1rem;
+  inset: 0;
+  justify-content: center;
+  margin: auto;
+  max-height: 50vh;
+  position: absolute;
+  width: 47rem;
+  img {
+    width: 23rem;
+    @media screen and (width < 1700px) {
+      width: 18rem;
+    }
+  }
+
+  .resume-caption {
+    text-align: center;
+    text-wrap: nowrap;
+    width: 100%;
+    transform: translateY(-1rem);
+  }
+
+  @media screen and (width < 1000px) {
+    margin: 7rem auto 0;
+    width: 50vw;
+  }
+}
+
+.icons-wrapper {
+  bottom: 5rem;
+  column-gap: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  left: 50%;
+  place-items: center;
+  position: absolute;
+  row-gap: 1rem;
+  transform: translateX(-50%);
+
+  img {
+    max-width: 30px;
+  }
+
+  @media screen and (width < 1700px) {
+    bottom: 3rem;
+  }
+  @media screen and (width < 1000px) {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    padding-inline: 2rem;
+    top: 25%;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+@media screen and (width < 1000px) {
+  .icons-wrapper img:nth-child(even) {
+    align-self: self-start;
+    transform: translateY(-30px);
+  }
+  .icons-wrapper img:nth-child(odd) {
+    align-self: self-end;
+  }
+}
+
+@media screen and (width < 650px) {
+  .icons-wrapper img {
+    max-width: 20px;
+  }
+  .icons-wrapper img:nth-child(even) {
+    transform: translateY(-20px);
+  }
+}
