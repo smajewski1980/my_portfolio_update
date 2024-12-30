@@ -30,6 +30,7 @@
   @media screen and (width < 1000px) {
     left: 50%;
     transform: translateX(-50%);
+
     .heading-word > * {
       rotate: 0deg;
     }
@@ -91,10 +92,7 @@ nav {
     font-size: 8vw;
   }
   .heading-wrapper {
-    left: 50%;
-    rotate: 0deg;
-    top: 10%;
-    transform: translateX(-50%);
+    top: 3rem;
   }
   .heading-word {
     display: flex;
@@ -106,5 +104,11 @@ nav {
   }
   .heading-word > * {
     rotate: 0deg;
+  }
+}
+
+@media screen and (width < 650px) {
+  .heading-wrapper {
+    top: 2rem;
   }
 }

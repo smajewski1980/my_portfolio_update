@@ -1,4 +1,4 @@
-main {
+/* main {
   align-items: center;
   display: flex;
   font-variation-settings: "SHDW" 0, "BVEL" 0;
@@ -93,13 +93,6 @@ main {
   .bio-text {
     margin-top: -160px;
   }
-  /* background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0.8) 40%,
-      rgba(0, 0, 0, 0.5) 50%,
-      transparent 100%
-    ); */
 }
 @media screen and (width < 650px) {
   main {
@@ -109,4 +102,4 @@ main {
     top: 2rem;
     width: 80vw;
   }
-}
+} */

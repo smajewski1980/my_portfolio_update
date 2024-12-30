@@ -135,9 +135,7 @@ body {
 
 @media screen and (width < 1000px) {
   .heading-wrapper {
-    display: grid;
     left: 50%;
-    position: absolute;
     rotate: 0deg;
     top: 1rem;
     transform: translateX(-50%);
