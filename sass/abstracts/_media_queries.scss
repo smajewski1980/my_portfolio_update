@@ -1,1 +1,17 @@
+@mixin media-lt-1700 {
+  @media (width < 1700px) {
+    @content;
+  }
+}
 
+@mixin media-lt-1200 {
+  @media (width < 1200px) {
+    @content;
+  }
+}
+
+@mixin media-lt-1000 {
+  @media (width < 1000px) {
+    @content;
+  }
+}

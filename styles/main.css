@@ -232,7 +232,7 @@ main {
   align-items: center;
   display: flex;
   font-variation-settings: "SHDW" 0, "BVEL" 0;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
   margin-inline: auto;
   min-height: 100vh;
@@ -241,58 +241,27 @@ main {
 }
 
 .bio-image-wrapper {
-  width: 20vw;
+  min-width: 18vw;
 }
 
 .bio-text {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 .bio-text p {
   filter: brightness(0.85);
   font-variation-settings: SHDW 0, BEVL 0;
   letter-spacing: 1px;
   line-height: 1.5;
-  max-width: 47ch;
+  min-width: 47ch;
+  max-width: 60ch;
 }
-
-@media screen and (width > 2200px) {
-  main {
-    padding-inline: 10rem;
-  }
-  .bio-text p {
-    max-width: 60ch;
-  }
-}
-@media screen and (width < 1700px) {
-  main {
-    gap: 2rem;
-  }
-  .bio-text {
-    gap: 0.5rem;
-  }
-  .bio-text p {
-    max-width: 50ch;
-  }
-  .bio-image-wrapper {
-    width: 15vw;
-  }
-}
-@media screen and (width < 1200px) {
-  main {
-    margin-top: 0;
-    padding-inline: 4rem;
-    width: 100%;
-  }
-  .bio-image-wrapper {
-    left: 5%;
-    position: absolute;
-    top: 35%;
-  }
+@media (width < 1200px) {
   .bio-text p {
     line-height: 1.3;
   }
 }
+
 @media screen and (width < 1000px) {
   main {
     flex-direction: column;
@@ -419,6 +388,11 @@ main {
   left: 10%;
   width: 70%;
 }
+@media screen and (width >= 1200px) {
+  .merry-go-round-wrapper .merry-go-round-inner-wrapper:hover, .merry-go-round-wrapper .merry-go-round-inner-wrapper:hover .gd-portrait-wrapper {
+    animation-play-state: paused;
+  }
+}
 
 footer {
   bottom: 1.5rem;
@@ -452,10 +426,11 @@ footer {
 }
 
 .picture-frames-wrapper {
-  bottom: 17rem;
   display: flex;
   gap: 1rem;
-  left: 27rem;
+  top: 50%;
+  transform: translateY(-50%);
+  right: calc(100% + 1rem);
   position: absolute;
 }
 .picture-frames-wrapper > * {
@@ -497,6 +472,17 @@ footer {
   scroll-snap-type: x mandatory;
   margin-left: 0.5rem;
 }
+@media (width < 1700px) {
+  .card-wrapper .cards-inner-wrapper {
+    -webkit-mask-image: linear-gradient(to right, black 30%, transparent 80%);
+            mask-image: linear-gradient(to right, black 30%, transparent 80%);
+  }
+}
+@media (width < 1700px) {
+  .card-wrapper {
+    bottom: 8rem;
+  }
+}
 
 .scroll-controls {
   bottom: 9rem;
@@ -517,6 +503,12 @@ footer {
 .scroll-controls button:first-child {
   transform: translateX(10px);
 }
+@media (width < 1700px) {
+  .scroll-controls {
+    bottom: 3.5rem;
+    font-size: 2.25rem;
+  }
+}
 
 .resume-img-wrapper {
   display: flex;
@@ -533,7 +525,7 @@ footer {
 .resume-img-wrapper img {
   width: 23rem;
 }
-@media screen and (width < 1700px) {
+@media (width < 1700px) {
   .resume-img-wrapper img {
     width: 18rem;
   }
@@ -565,7 +557,7 @@ footer {
 .icons-wrapper img {
   max-width: 30px;
 }
-@media screen and (width < 1700px) {
+@media (width < 1700px) {
   .icons-wrapper {
     bottom: 3rem;
   }
@@ -672,14 +664,6 @@ nav li:nth-of-type(3):hover, nav li:nth-of-type(3):focus-visible {
   font-variation-settings: "SHDW" 50, "BVEL" 60;
 }
 
-@media screen and (width > 2200px) {
-  body {
-    background-position: 0 -225px;
-  }
-  li {
-    margin-bottom: 1.5rem;
-  }
-}
 @media screen and (width < 1000px) {
   nav {
     left: 50%;

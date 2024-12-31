@@ -92,12 +92,12 @@
   position: absolute;
   transform: translatex(-50%);
 } */
-@media screen and (width >= 1200px) {
+/* @media screen and (width >= 1200px) {
   .merry-go-round-inner-wrapper:hover,
   .merry-go-round-inner-wrapper:hover .gd-portrait-wrapper {
     animation-play-state: paused;
   }
-}
+} */
 @media screen and (width < 1200px) {
   .merry-go-round-wrapper {
     scale: 0.5;

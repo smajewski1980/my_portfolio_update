@@ -1,4 +1,5 @@
 @use "../abstracts/mixins" as *;
+@use "../abstracts/media_queries" as *;
 
 .home-bg {
   width: 100%;
@@ -74,14 +75,6 @@ nav {
   }
 }
 
-@media screen and (width > 2200px) {
-  body {
-    background-position: 0 -225px;
-  }
-  li {
-    margin-bottom: 1.5rem;
-  }
-}
 @media screen and (width < 1000px) {
   nav {
     left: 50%;

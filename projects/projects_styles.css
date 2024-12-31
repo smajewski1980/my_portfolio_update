@@ -134,7 +134,7 @@
   z-index: 99;
 } */
 
-@media screen and (width < 1700px) {
+/* @media screen and (width < 1700px) {
   .picture-frames-wrapper {
     bottom: 10rem;
     left: 17rem;
@@ -152,12 +152,8 @@
     bottom: 3.5rem;
     font-size: 2.25rem;
   }
-}
-@media screen and (width < 1400px) {
-  .picture-frames-wrapper {
-    left: 5rem;
-  }
-}
+} */
+
 @media screen and (width < 1150px) {
   .picture-frames-wrapper {
     bottom: 7.5rem;

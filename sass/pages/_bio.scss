@@ -1,8 +1,10 @@
+@use "../abstracts/media_queries" as *;
+
 main {
   align-items: center;
   display: flex;
   font-variation-settings: "SHDW" 0, "BVEL" 0;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
   margin-inline: auto;
   min-height: 100vh;
@@ -11,59 +13,24 @@ main {
 }
 
 .bio-image-wrapper {
-  width: 20vw;
+  min-width: 18vw;
 }
 
 .bio-text {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.5rem;
 
   p {
     filter: brightness(0.85);
     font-variation-settings: SHDW 0, BEVL 0;
     letter-spacing: 1px;
     line-height: 1.5;
-    max-width: 47ch;
-  }
-}
-
-@media screen and (width > 2200px) {
-  main {
-    padding-inline: 10rem;
-  }
-  .bio-text p {
+    min-width: 47ch;
     max-width: 60ch;
-  }
-}
 
-@media screen and (width < 1700px) {
-  main {
-    gap: 2rem;
-  }
-  .bio-text {
-    gap: 0.5rem;
-  }
-  .bio-text p {
-    max-width: 50ch;
-  }
-  .bio-image-wrapper {
-    width: 15vw;
-  }
-}
-
-@media screen and (width < 1200px) {
-  main {
-    margin-top: 0;
-    padding-inline: 4rem;
-    width: 100%;
-  }
-  .bio-image-wrapper {
-    left: 5%;
-    position: absolute;
-    top: 35%;
-  }
-  .bio-text p {
-    line-height: 1.3;
+    @include media-lt-1200 {
+      line-height: 1.3;
+    }
   }
 }
 

@@ -94,6 +94,13 @@
         width: 70%;
       }
     }
+
+    @media screen and (width >= 1200px) {
+      &:hover,
+      &:hover .gd-portrait-wrapper {
+        animation-play-state: paused;
+      }
+    }
   }
 }
 
