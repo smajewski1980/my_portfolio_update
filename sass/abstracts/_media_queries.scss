@@ -15,3 +15,9 @@
     @content;
   }
 }
+
+@mixin media-lt-650 {
+  @media (width < 650px) {
+    @content;
+  }
+}

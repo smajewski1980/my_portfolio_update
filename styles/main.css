@@ -598,7 +598,7 @@ footer {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media screen and (width < 1000px) {
+@media (width < 1000px) {
   .home-bg {
     display: none;
   }
@@ -609,7 +609,7 @@ footer {
   font-variation-settings: "SHDW" 35, "BVEL" 85;
   position: absolute;
   rotate: -15deg;
-  font-size: clamp(1.25rem, 5vw, 6rem);
+  font-size: clamp(2rem, 5vw, 6rem);
   left: 7%;
   pointer-events: none;
   top: 8%;
@@ -619,14 +619,30 @@ footer {
   letter-spacing: 20px;
   line-height: 1.3;
 }
+@media (width < 1000px) {
+  .home-heading-wrapper .heading-word:first-child {
+    transform: translateX(1.5rem);
+  }
+}
+@media (width < 650px) {
+  .home-heading-wrapper .heading-word:first-child {
+    transform: translateX(0.75rem);
+  }
+}
+@media (width < 650px) {
+  .home-heading-wrapper .heading-word {
+    letter-spacing: 10px;
+  }
+}
 .home-heading-wrapper .heading-word > * {
   rotate: 15deg;
 }
-@media screen and (width < 1000px) {
+@media (width < 1000px) {
   .home-heading-wrapper {
     left: 50%;
     transform: translateX(-50%);
     rotate: 0deg;
+    top: 2rem;
   }
   .home-heading-wrapper .heading-word > * {
     rotate: 0deg;
@@ -643,7 +659,7 @@ nav {
 nav li {
   cursor: pointer;
   display: list-item;
-  font-size: 2vw;
+  font-size: clamp(1.5rem, 3vw, 3rem);
   font-variation-settings: "SHDW" 75, "BVEL" 75;
   letter-spacing: 5px;
   line-height: 1;
@@ -663,33 +679,10 @@ nav li:nth-of-type(3):hover, nav li:nth-of-type(3):focus-visible {
   filter: brightness(1.1) hue-rotate(300deg);
   font-variation-settings: "SHDW" 50, "BVEL" 60;
 }
-
-@media screen and (width < 1000px) {
+@media (width < 1000px) {
   nav {
     left: 50%;
-    top: 35%;
+    top: 40%;
     transform: translateX(-50%);
-  }
-  nav li {
-    font-size: 8vw;
-  }
-  .heading-wrapper {
-    top: 3rem;
-  }
-  .heading-word {
-    display: flex;
-    letter-spacing: 2px;
-    line-height: 1.3;
-  }
-  .heading-word:first-child {
-    transform: translateX(1rem);
-  }
-  .heading-word > * {
-    rotate: 0deg;
-  }
-}
-@media screen and (width < 650px) {
-  .heading-wrapper {
-    top: 2rem;
   }
 }/*# sourceMappingURL=main.css.map */
