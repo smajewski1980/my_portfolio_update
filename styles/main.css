@@ -74,11 +74,15 @@ body {
   right: 4%;
   rotate: 15deg;
   top: 7%;
+  overflow: hidden;
 }
 .page-title-wrapper .page-title-word {
   display: flex;
   letter-spacing: 12px;
   line-height: 1.3;
+}
+.page-title-wrapper .page-title-word:nth-of-type(2) {
+  margin-left: 2rem;
 }
 .page-title-wrapper .page-title {
   display: flex;
@@ -332,6 +336,99 @@ main {
     margin-top: -45vw;
   }
 }
+.merry-go-round-wrapper {
+  --spin-anim-tim: 120s;
+  height: 100vh;
+  position: relative;
+  scale: 0.75;
+  text-align: center;
+  width: 100%;
+  z-index: 5;
+}
+.merry-go-round-wrapper .merry-go-round-inner-wrapper {
+  animation: spin-it var(--spin-anim-tim) linear infinite;
+  height: 250px;
+  left: calc(50% - 150px);
+  position: absolute;
+  top: 50%;
+  transform: perspective(1000px);
+  transform-style: preserve-3d;
+  width: 300px;
+}
+@keyframes spin-it {
+  from {
+    transform: perspective(1000px) rotateX(5deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(5deg) rotateY(-360deg);
+  }
+}
+.merry-go-round-wrapper .merry-go-round-inner-wrapper .gd-portrait-wrapper {
+  animation: spin-to-stay var(--spin-anim-tim) linear infinite;
+}
+@keyframes spin-to-stay {
+  from {
+    transform: rotateY(0deg) translateY(-50px);
+  }
+  to {
+    transform: rotateY(360deg) translateY(-50px);
+  }
+}
+.merry-go-round-wrapper .merry-go-round-inner-wrapper .merry-go-round-item {
+  inset: 0;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: rotateY(calc((var(--position) - 1) * 360 / var(--quantity) * 1deg)) translatez(550px);
+}
+.merry-go-round-wrapper .merry-go-round-inner-wrapper .merry-go-round-item > * {
+  position: absolute;
+  z-index: -5;
+}
+.merry-go-round-wrapper .merry-go-round-inner-wrapper .merry-go-round-item p {
+  bottom: 0px;
+  font-size: 0.8rem;
+  font-variation-settings: "SHDW" 0, "BVEL" 50;
+  letter-spacing: 2px;
+  line-height: 1.3;
+  padding: 0.5rem;
+  width: 100%;
+}
+.merry-go-round-wrapper .merry-go-round-inner-wrapper .merry-go-round-item p::before {
+  background: rgba(50, 50, 50, 0.8);
+  border-radius: 15px;
+  content: "";
+  filter: blur(2px);
+  inset: 0;
+  position: absolute;
+  z-index: -1;
+}
+.merry-go-round-wrapper .merry-go-round-inner-wrapper .merry-go-round-item img {
+  left: 0;
+  width: 100%;
+}
+.merry-go-round-wrapper .merry-go-round-inner-wrapper .merry-go-round-item img:last-child {
+  filter: blur(2px) brightness(0.4);
+  transform: translateZ(-1px);
+}
+.merry-go-round-wrapper .merry-go-round-inner-wrapper .merry-go-round-item:nth-of-type(5) img {
+  left: 5%;
+  width: 90%;
+}
+.merry-go-round-wrapper .merry-go-round-inner-wrapper .merry-go-round-item:nth-of-type(6) img {
+  bottom: 60px;
+  left: 10%;
+  width: 70%;
+}
+
+footer {
+  bottom: 1.5rem;
+  font-variation-settings: "SHDW" 0, "BVEL" 100;
+  left: 50%;
+  letter-spacing: 1px;
+  position: absolute;
+  transform: translatex(-50%);
+}
+
 .info-wrapper {
   left: 50%;
   position: absolute;
@@ -445,7 +542,6 @@ main {
   text-align: center;
   text-wrap: nowrap;
   width: 100%;
-  transform: translateY(-1rem);
 }
 @media screen and (width < 1000px) {
   .resume-img-wrapper {
@@ -521,7 +617,7 @@ main {
   font-variation-settings: "SHDW" 35, "BVEL" 85;
   position: absolute;
   rotate: -15deg;
-  font-size: clamp(1.25rem, 5vw, 4rem);
+  font-size: clamp(1.25rem, 5vw, 6rem);
   left: 7%;
   pointer-events: none;
   top: 8%;

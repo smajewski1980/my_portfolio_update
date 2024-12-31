@@ -32,11 +32,16 @@ body {
   right: 4%;
   rotate: 15deg;
   top: 7%;
+  overflow: hidden;
 
   .page-title-word {
     display: flex;
     letter-spacing: 12px;
     line-height: 1.3;
+
+    &:nth-of-type(2) {
+      margin-left: 2rem;
+    }
   }
 
   .page-title {

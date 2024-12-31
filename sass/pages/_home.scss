@@ -13,7 +13,7 @@
 
 .home-heading-wrapper {
   @include heading-wrapper();
-  font-size: clamp(1.25rem, 5vw, 4rem);
+  font-size: clamp(1.25rem, 5vw, 6rem);
   left: 7%;
   pointer-events: none;
   top: 8%;

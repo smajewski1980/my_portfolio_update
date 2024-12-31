@@ -1,10 +1,4 @@
-body {
-  overflow-x: hidden;
-}
-.page-title-word:nth-of-type(2) {
-  margin-left: 2rem;
-}
-.merry-go-round-wrapper {
+/* .merry-go-round-wrapper {
   --spin-anim-tim: 120s;
   height: 100vh;
   position: relative;
@@ -12,8 +6,8 @@ body {
   text-align: center;
   width: 100%;
   z-index: 5;
-}
-.merry-go-round-inner-wrapper {
+} */
+/* .merry-go-round-inner-wrapper {
   animation: spin-it var(--spin-anim-tim) linear infinite;
   height: 250px;
   left: calc(50% - 150px);
@@ -22,30 +16,29 @@ body {
   transform: perspective(1000px);
   transform-style: preserve-3d;
   width: 300px;
-}
-@keyframes spin-it {
+} */
+/* @keyframes spin-it {
   from {
     transform: perspective(1000px) rotateX(5deg) rotateY(0deg);
   }
   to {
     transform: perspective(1000px) rotateX(5deg) rotateY(-360deg);
   }
-}
-.merry-go-round-item {
+} */
+/* .merry-go-round-item {
   inset: 0;
   position: absolute;
   transform-style: preserve-3d;
-
   transform: rotateY(
       calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
     )
     translatez(550px);
-}
-.merry-go-round-item > * {
+} */
+/* .merry-go-round-item > * {
   position: absolute;
   z-index: -5;
-}
-.merry-go-round-item p {
+} */
+/* .merry-go-round-item p {
   bottom: 0px;
   font-size: 0.8rem;
   font-variation-settings: "SHDW" 0, "BVEL" 50;
@@ -53,8 +46,8 @@ body {
   line-height: 1.3;
   padding: 0.5rem;
   width: 100%;
-}
-.merry-go-round-item p::before {
+} */
+/* .merry-go-round-item p::before {
   background: rgba(50, 50, 50, 0.8);
   border-radius: 15px;
   content: "";
@@ -62,16 +55,16 @@ body {
   inset: 0;
   position: absolute;
   z-index: -1;
-}
-.merry-go-round-item img {
+} */
+/* .merry-go-round-item img {
   left: 0;
   width: 100%;
-}
-.merry-go-round-item img:last-child {
+} */
+/* .merry-go-round-item img:last-child {
   filter: blur(2px) brightness(0.4);
   transform: translateZ(-1px);
-}
-.merry-go-round-item:nth-of-type(5) img {
+} */
+/* .merry-go-round-item:nth-of-type(5) img {
   left: 5%;
   width: 90%;
 }
@@ -79,26 +72,26 @@ body {
   bottom: 60px;
   left: 10%;
   width: 70%;
-}
-.gd-portrait-wrapper {
+} */
+/* .gd-portrait-wrapper {
   animation: spin-to-stay var(--spin-anim-tim) linear infinite;
-}
-@keyframes spin-to-stay {
+} */
+/* @keyframes spin-to-stay {
   from {
     transform: rotateY(0deg) translateY(-50px);
   }
   to {
     transform: rotateY(360deg) translateY(-50px);
   }
-}
-footer {
+} */
+/* footer {
   bottom: 1.5rem;
   font-variation-settings: "SHDW" 0, "BVEL" 100;
   left: 50%;
   letter-spacing: 1px;
   position: absolute;
   transform: translatex(-50%);
-}
+} */
 @media screen and (width >= 1200px) {
   .merry-go-round-inner-wrapper:hover,
   .merry-go-round-inner-wrapper:hover .gd-portrait-wrapper {
