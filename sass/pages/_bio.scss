@@ -10,10 +10,34 @@ main {
   min-height: 100vh;
   padding-top: 5rem;
   width: 50vw;
+
+  @include media-lt-1000 {
+    flex-direction: column;
+    margin-bottom: 2rem;
+    width: 90vw;
+  }
 }
 
 .bio-image-wrapper {
   min-width: 18vw;
+
+  .bio-img-1 {
+    @include media-lt-1000 {
+      display: none;
+    }
+  }
+
+  .bio-img-2 {
+    display: none;
+
+    @include media-lt-1000 {
+      display: block;
+    }
+  }
+
+  @include media-lt-1000 {
+    margin-top: 1rem;
+  }
 }
 
 .bio-text {
@@ -31,49 +55,10 @@ main {
     @include media-lt-1200 {
       line-height: 1.3;
     }
-  }
-}
 
-@media screen and (width < 1000px) {
-  main {
-    flex-direction: column;
-    margin-bottom: 2rem;
-    padding-top: 5rem;
-  }
-  .bio-image-wrapper {
-    left: 0;
-    position: relative;
-    top: 4rem;
-    width: 50vw;
-  }
-  .bio-image-wrapper img {
-    width: 100%;
-  }
-  .bio-image-wrapper::after {
-    content: "";
-    inset: 0;
-    position: absolute;
-  }
-  .bio-text p {
-    text-align: center;
-  }
-  .bio-image-wrapper {
-    mask-image: linear-gradient(black 60%, transparent 60%);
-  }
-  .bio-text {
-    margin-top: -160px;
-  }
-}
-
-@media screen and (width < 650px) {
-  main {
-    padding-inline: 1rem;
-  }
-  .bio-image-wrapper {
-    top: 2rem;
-    width: 80vw;
-  }
-  .bio-text {
-    margin-top: -45vw;
+    @include media-lt-1000 {
+      text-align: center;
+      min-width: 100%;
+    }
   }
 }
