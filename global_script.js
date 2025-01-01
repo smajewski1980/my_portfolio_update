@@ -75,3 +75,8 @@ if (getInnerWidth() > 1200) {
   startFl4sStaggered();
   setTimeout(fadeInFl4s, 500);
 }
+
+if (getInnerWidth() < 1200) {
+  document.querySelector(".fl4-w-1").remove();
+  document.querySelector(".fl4-w-2").remove();
+}

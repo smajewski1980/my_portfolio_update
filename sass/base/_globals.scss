@@ -31,9 +31,7 @@ body {
       display: flex;
       letter-spacing: 2px;
       line-height: 1.1;
-    }
 
-    @include media-lt-650 {
       &:first-child {
         transform: translateX(1rem);
       }
