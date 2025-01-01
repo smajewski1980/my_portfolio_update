@@ -168,4 +168,9 @@ body {
   .page-title-wrapper {
     right: 1.5rem;
   }
+  .heading-wrapper .heading-word {
+    &:first-child {
+      transform: translateX(1rem);
+    }
+  }
 }
