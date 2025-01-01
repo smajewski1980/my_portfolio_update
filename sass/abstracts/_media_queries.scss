@@ -21,3 +21,9 @@
     @content;
   }
 }
+
+@mixin media-gt-eq-1200 {
+  @media (width >= 1200px) {
+    @content;
+  }
+}

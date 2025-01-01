@@ -65,6 +65,43 @@ body {
 .heading-wrapper .heading-word > * {
   rotate: 15deg;
 }
+@media (width < 1000px) {
+  .heading-wrapper .heading-word > * {
+    rotate: 0deg;
+  }
+}
+@media (width < 1000px) {
+  .heading-wrapper .heading-word {
+    display: flex;
+    letter-spacing: 2px;
+    line-height: 1.1;
+  }
+}
+@media (width < 650px) {
+  .heading-wrapper .heading-word:first-child {
+    transform: translateX(1rem);
+  }
+}
+@media (width >= 1200px) {
+  .heading-wrapper:hover, .heading-wrapper:focus-visible {
+    font-variation-settings: "SHDW" 15, "BVEL" 50;
+    transform: translate(1px, 1px);
+  }
+  .heading-wrapper:hover .heading-word:first-child > *:nth-child(even) {
+    rotate: 20deg;
+  }
+  .heading-wrapper:hover .heading-word:last-child > *:nth-child(odd) {
+    rotate: 10deg;
+  }
+}
+@media (width < 1000px) {
+  .heading-wrapper {
+    left: 50%;
+    rotate: 0deg;
+    top: 1rem;
+    transform: translateX(-50%);
+  }
+}
 
 .page-title-wrapper {
   font-size: 3.5vw;
@@ -96,6 +133,11 @@ body {
   display: block;
   margin-top: 1rem;
   rotate: 15deg;
+}
+@media (width < 1000px) {
+  .page-title-wrapper {
+    display: none;
+  }
 }
 
 .pages-flame-wrapper {
@@ -156,49 +198,6 @@ body {
 @keyframes flame4-run {
   to {
     transform: translateX(-13000px);
-  }
-}
-@media screen and (width >= 1200px) {
-  .heading-wrapper:hover,
-  .heading-wrapper:focus-visible {
-    font-variation-settings: "SHDW" 15, "BVEL" 50;
-    transform: translate(1px, 1px);
-  }
-  .heading-wrapper:hover .heading-word:first-child > *:nth-child(even) {
-    rotate: 20deg;
-  }
-  .heading-wrapper:hover .heading-word:last-child > *:nth-child(odd) {
-    rotate: 10deg;
-  }
-}
-@media screen and (width < 1000px) {
-  .heading-wrapper {
-    left: 50%;
-    rotate: 0deg;
-    top: 1rem;
-    transform: translateX(-50%);
-  }
-  .heading-wrapper .heading-word {
-    display: flex;
-    letter-spacing: 2px;
-    line-height: 1.1;
-  }
-  .heading-wrapper .heading-word > * {
-    rotate: 0deg;
-  }
-  .heading-wrapper .heading-word:first-child {
-    transform: translateX(2vw);
-  }
-  .page-title-wrapper {
-    display: none;
-  }
-}
-@media screen and (width < 650px) {
-  .page-title-wrapper {
-    right: 1.5rem;
-  }
-  .heading-wrapper .heading-word:first-child {
-    transform: translateX(1rem);
   }
 }
 .card {
