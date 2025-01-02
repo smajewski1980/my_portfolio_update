@@ -154,7 +154,7 @@
   }
 } */
 
-@media screen and (width < 1150px) {
+/* @media screen and (width < 1150px) {
   .picture-frames-wrapper {
     bottom: 7.5rem;
     left: 3rem;
@@ -172,8 +172,8 @@
     bottom: 0rem;
     font-size: 2rem;
   }
-}
-@media screen and (width < 1000px) {
+} */
+/* @media screen and (width < 1000px) {
   .picture-frames-wrapper {
     left: 50%;
     top: 6rem;
@@ -185,8 +185,8 @@
     top: 13rem;
     width: 90vw;
   }
-}
-@media screen and (width < 750px) {
+} */
+/* @media screen and (width < 750px) {
   .cards-inner-wrapper {
     mask-image: linear-gradient(
       to right,
@@ -206,4 +206,4 @@
   .desc {
     line-height: 1.3;
   }
-}
+} */

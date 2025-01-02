@@ -24,7 +24,7 @@ const descriptions = [
   },
   {
     title: "My Trivia App",
-    desc: "I searched a list of free APIs and made this to practice working with fetched API data.",
+    desc: "A little trivia app I made to practice working with fetched API data.",
   },
   {
     title: "Bookmark Landing Page",
