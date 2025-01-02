@@ -29,7 +29,7 @@
         transform: translateX(1.5rem);
       }
       @include media-lt-650 {
-        transform: translateX(0.75rem);
+        transform: translateX(1rem);
       }
     }
     @include media-lt-650 {
@@ -54,7 +54,7 @@
 }
 
 nav {
-  bottom: 10%;
+  top: 50%;
   left: 17%;
   opacity: 1;
   padding-inline: 2rem;
@@ -88,9 +88,12 @@ nav {
     }
   }
 
+  @include media-lt-1200 {
+    top: 40%;
+  }
+
   @include media-lt-1000 {
     left: 50%;
-    top: 40%;
     transform: translateX(-50%);
   }
 }
