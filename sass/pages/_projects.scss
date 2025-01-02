@@ -1,20 +1,20 @@
 @use "../abstracts/media_queries" as *;
+@use "../abstracts/variables" as *;
 
 .card-wrapper {
   --gap-spacer: 1rem;
-  // bottom: 15rem;
-  top: 50vh;
   left: 50vw;
   position: absolute;
+  top: 50vh;
   transform: translateX(calc(-125px + (var(--gap-spacer) * -1)));
   width: calc(50vw + (125px + var(--gap-spacer)));
 
   &::before {
-    border-radius: 15px;
+    border-radius: $b-rad;
     content: "";
     height: 187px;
     left: 1rem;
-    outline: 3px solid rgb(221, 76, 225);
+    outline: 3px solid $clr-accent;
     outline-offset: 0.5rem;
     pointer-events: none;
     position: absolute;
@@ -24,12 +24,12 @@
   }
 
   .info-wrapper {
+    bottom: calc(100% + 1.5rem);
+    min-height: 190px;
     position: absolute;
     right: 0%;
     text-align: center;
-    bottom: calc(100% + 1.5rem);
     width: 100vw;
-    min-height: 190px;
 
     .desc-title {
       font-size: clamp(1.25rem, 2vw, 2.5rem);
@@ -62,10 +62,10 @@
   .picture-frames-wrapper {
     display: flex;
     gap: 1rem;
+    position: absolute;
+    right: calc(100% + 1rem);
     top: 50%;
     transform: translateY(-50%);
-    right: calc(100% + 1rem);
-    position: absolute;
 
     > * {
       width: 10rem;
@@ -81,9 +81,9 @@
 
     @include media-lt-650 {
       flex-direction: row;
-      top: -130%;
-      right: 0;
       justify-content: space-around;
+      right: 0;
+      top: -130%;
       width: 100vw;
     }
   }
@@ -91,13 +91,7 @@
   .cards-inner-wrapper {
     display: flex;
     gap: var(--gap-spacer);
-    mask-image: linear-gradient(
-      to right,
-      transparent,
-      black 1%,
-      black 30%,
-      transparent 90%
-    );
+    margin-left: 0.5rem;
     overflow-x: hidden;
     padding-block: 1rem;
     padding-left: var(--gap-spacer);
@@ -105,7 +99,13 @@
     scroll-behavior: smooth;
     scroll-padding: 0.5rem;
     scroll-snap-type: x mandatory;
-    margin-left: 0.5rem;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 1%,
+      black 30%,
+      transparent 90%
+    );
 
     @include media-lt-1700 {
       mask-image: linear-gradient(to right, black 30%, transparent 80%);

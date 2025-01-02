@@ -49,16 +49,15 @@ main {
     font-variation-settings: SHDW 0, BEVL 0;
     letter-spacing: 1px;
     line-height: 1.5;
-    min-width: 47ch;
     max-width: 60ch;
+    min-width: 47ch;
 
     @include media-lt-1200 {
       line-height: 1.3;
     }
-
     @include media-lt-1000 {
-      text-align: center;
       min-width: 100%;
+      text-align: center;
     }
   }
 }

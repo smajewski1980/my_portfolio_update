@@ -4,3 +4,31 @@
   position: absolute;
   rotate: -15deg;
 }
+
+@mixin heading-word($letter-sp, $ln-ht) {
+  display: flex;
+  letter-spacing: $letter-sp;
+  line-height: $ln-ht;
+
+  > * {
+    rotate: 15deg;
+  }
+}
+
+@mixin nav-item-hov() {
+  &:nth-of-type(1):hover,
+  &:nth-of-type(1):focus-visible {
+    filter: brightness(1.1) hue-rotate(45deg);
+    font-variation-settings: "SHDW" 50, "BVEL" 60;
+  }
+  &:nth-of-type(2):hover,
+  &:nth-of-type(2):focus-visible {
+    filter: brightness(1.1) hue-rotate(180deg);
+    font-variation-settings: "SHDW" 50, "BVEL" 60;
+  }
+  &:nth-of-type(3):hover,
+  &:nth-of-type(3):focus-visible {
+    filter: brightness(1.1) hue-rotate(300deg);
+    font-variation-settings: "SHDW" 50, "BVEL" 60;
+  }
+}

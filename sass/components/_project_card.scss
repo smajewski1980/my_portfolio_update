@@ -1,5 +1,6 @@
+@use "../abstracts/variables" as *;
 .card {
-  border-radius: 15px;
+  border-radius: $b-rad;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -11,11 +12,9 @@
   &:not(.card-spacer) {
     background: rgba(124, 20, 153, 0.4);
   }
-
   .proj-card-img-wrapper img {
-    border-radius: 15px 15px 0 0;
+    border-radius: $b-rad $b-rad 0 0;
   }
-
   .card-icons-wrapper {
     align-items: center;
     display: flex;
@@ -24,7 +23,6 @@
     margin: auto;
     padding-bottom: 0.5rem;
   }
-
   .link {
     inset: 0;
     position: absolute;

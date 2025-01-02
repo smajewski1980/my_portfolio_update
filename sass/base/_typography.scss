@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 @font-face {
   font-family: "RocherColorGX";
   line-gap-override: 85%;
@@ -6,7 +8,7 @@
 }
 
 body {
-  color: var(--font-fallback);
+  color: $clr-accent;
   font-weight: bold;
   font-family: "RocherColorGX", system-ui, "Segoe UI", "Open Sans",
     "Helvetica Neue", sans-serif;
