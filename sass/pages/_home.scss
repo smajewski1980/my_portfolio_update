@@ -46,7 +46,7 @@
 }
 
 nav {
-  left: 17%;
+  left: 18%;
   opacity: 1;
   padding-inline: 2rem;
   position: absolute;
@@ -55,7 +55,7 @@ nav {
   li {
     cursor: pointer;
     display: list-item;
-    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-variation-settings: "SHDW" 75, "BVEL" 75;
     letter-spacing: 5px;
     line-height: 1;
