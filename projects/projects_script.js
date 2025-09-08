@@ -4,7 +4,7 @@ const btnNext = document.querySelector('.btn-next');
 const descriptions = [
   {
     title: 'The Crazy Unicorn Shoppe',
-    desc: 'This is a full stack e-commerce app. It is connected to a</br>Postgres DB and allows users to make an account, have persistant cart data,</br>place an order, and more. The Dev Info page will give you all the technical details.',
+    desc: 'This is a full stack e-commerce app. It is connected to a</br>database and allows users to make an account, have persistant cart data,</br>place an order and more. The Dev Info page will give you all the technical details.',
   },
   {
     title: 'The Change Changer',

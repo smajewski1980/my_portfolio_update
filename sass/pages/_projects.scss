@@ -107,16 +107,6 @@
       transparent 90%
     );
 
-    .card {
-      position: relative;
-
-      a::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-      }
-    }
-
     @include media-lt-1700 {
       mask-image: linear-gradient(to right, black 30%, transparent 80%);
     }

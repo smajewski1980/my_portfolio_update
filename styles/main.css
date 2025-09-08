@@ -211,6 +211,11 @@ body {
   position: relative;
   text-align: center;
 }
+.card a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
 .card:not(.card-spacer) {
   background: rgba(124, 20, 153, 0.4);
 }
@@ -220,15 +225,16 @@ body {
 .card .card-icons-wrapper {
   align-items: center;
   display: flex;
-  gap: 1rem;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: auto;
-  padding-bottom: 0.5rem;
+  padding: 0rem 0.5rem 0.5rem;
+  width: 100%;
 }
-.card .link {
-  inset: 0;
-  position: absolute;
-  z-index: 99;
+.card .card-icons-wrapper .icon {
+  max-width: 40px;
+}
+.card:first-child .icon {
+  max-width: 30px;
 }
 
 main {
@@ -515,14 +521,6 @@ footer {
   scroll-snap-type: x mandatory;
   -webkit-mask-image: linear-gradient(to right, transparent, black 1%, black 30%, transparent 90%);
           mask-image: linear-gradient(to right, transparent, black 1%, black 30%, transparent 90%);
-}
-.card-wrapper .cards-inner-wrapper .card {
-  position: relative;
-}
-.card-wrapper .cards-inner-wrapper .card a::before {
-  content: "";
-  position: absolute;
-  inset: 0;
 }
 @media (width < 1700px) {
   .card-wrapper .cards-inner-wrapper {
