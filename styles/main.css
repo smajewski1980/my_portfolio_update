@@ -516,6 +516,14 @@ footer {
   -webkit-mask-image: linear-gradient(to right, transparent, black 1%, black 30%, transparent 90%);
           mask-image: linear-gradient(to right, transparent, black 1%, black 30%, transparent 90%);
 }
+.card-wrapper .cards-inner-wrapper .card {
+  position: relative;
+}
+.card-wrapper .cards-inner-wrapper .card a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
 @media (width < 1700px) {
   .card-wrapper .cards-inner-wrapper {
     -webkit-mask-image: linear-gradient(to right, black 30%, transparent 80%);

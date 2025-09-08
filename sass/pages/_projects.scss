@@ -1,5 +1,5 @@
-@use "../abstracts/media_queries" as *;
-@use "../abstracts/variables" as *;
+@use '../abstracts/media_queries' as *;
+@use '../abstracts/variables' as *;
 
 .card-wrapper {
   --gap-spacer: 1rem;
@@ -11,7 +11,7 @@
 
   &::before {
     border-radius: $b-rad;
-    content: "";
+    content: '';
     height: 187px;
     left: 1rem;
     outline: 3px solid $clr-accent;
@@ -33,7 +33,7 @@
 
     .desc-title {
       font-size: clamp(1.25rem, 2vw, 2.5rem);
-      font-variation-settings: "SHDW" 80, "BVEL" 70;
+      font-variation-settings: 'SHDW' 80, 'BVEL' 70;
       letter-spacing: 5px;
       line-height: 1.1;
       margin-bottom: 0.75rem;
@@ -41,7 +41,7 @@
 
     .desc {
       font-size: clamp(1rem, 1.25vw, 1.5rem);
-      font-variation-settings: "SHDW" 100, "BVEL" 15;
+      font-variation-settings: 'SHDW' 100, 'BVEL' 15;
       letter-spacing: 2px;
       line-height: 1.4;
     }
@@ -106,6 +106,16 @@
       black 30%,
       transparent 90%
     );
+
+    .card {
+      position: relative;
+
+      a::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+      }
+    }
 
     @include media-lt-1700 {
       mask-image: linear-gradient(to right, black 30%, transparent 80%);

@@ -3,6 +3,10 @@ const btnPrev = document.querySelector('.btn-prev');
 const btnNext = document.querySelector('.btn-next');
 const descriptions = [
   {
+    title: 'The Crazy Unicorn Shoppe',
+    desc: 'This is a full stack e-commerce app. It is connected to a</br>Postgres DB and allows users to make an account, have persistant cart data,</br>place an order, and more. The Dev Info page will give you all the technical details.',
+  },
+  {
     title: 'The Change Changer',
     desc: 'Here is a currency exchange app. When I deployed, in order to hide</br>my API key, I had to set up a Netlify Function, which acts as an endpoint</br>that my app can hit, which then hits the API and also has access to the environment variables.',
   },
@@ -67,7 +71,7 @@ function prevCard() {
   }
 }
 function nextCard() {
-  if (currentCard < 8 && !moving) {
+  if (currentCard < 9 && !moving) {
     currentCard++;
     moving = true;
     setTimeout(() => {
@@ -76,7 +80,7 @@ function nextCard() {
     addSnapClass();
     populateInfoFields();
     btnPrev.classList.remove('inactive-control');
-    if (currentCard === 8) {
+    if (currentCard === 9) {
       btnNext.classList.add('inactive-control');
     }
   }
