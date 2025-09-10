@@ -27,12 +27,16 @@ const descriptions = [
     desc: 'Built with React.js, it is my current catalog and is a work in progress.</br>This one includes a 10x10 storage unit with all of this music inside.',
   },
   {
-    title: 'Product List With Cart',
-    desc: 'A Frontend Mentor project of an interactive product shopping cart,</br>which has a responsive layout and an order confirmation modal.',
+    title: 'Multi-Step Form',
+    desc: 'A Frontend Mentor project of a multi-step HTML form.',
   },
   {
     title: 'My Trivia App',
     desc: 'A little trivia app I made to practice working with fetched API data.',
+  },
+  {
+    title: 'Product List With Cart',
+    desc: 'A Frontend Mentor project of an interactive product shopping cart,</br>which has a responsive layout and an order confirmation modal.',
   },
   {
     title: 'Bookmark Landing Page',
@@ -71,7 +75,7 @@ function prevCard() {
   }
 }
 function nextCard() {
-  if (currentCard < 9 && !moving) {
+  if (currentCard < 10 && !moving) {
     currentCard++;
     moving = true;
     setTimeout(() => {
@@ -80,7 +84,7 @@ function nextCard() {
     addSnapClass();
     populateInfoFields();
     btnPrev.classList.remove('inactive-control');
-    if (currentCard === 9) {
+    if (currentCard === 10) {
       btnNext.classList.add('inactive-control');
     }
   }
