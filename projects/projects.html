@@ -2,16 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Steve's Porfolio - Projects</title>
     <link
       rel="shortcut icon"
       href="../assets/icons/favicon_2.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="../styles/main.css" />
-    <script src="../global_script.js" defer></script>
-    <script src="projects_script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="../styles/main.css"
+    />
+    <script
+      src="../global_script.js"
+      defer
+    ></script>
+    <script
+      src="projects_script.js"
+      defer
+    ></script>
   </head>
 
   <body>
@@ -53,16 +65,25 @@
         <p>S</p>
       </div>
     </div>
-    
+
     <div class="card-wrapper">
-      <div class="info-wrapper">
-        <p class="desc-title"></br></p>
-        <p class="desc"></p>
+      <div class="info-wrapper desc-open">
+        <p class="desc-title"></p>
+        <details>
+          <summary>
+            click here for more info,<br />click the slide to visit
+          </summary>
+          <p class="desc"></p>
+        </details>
+        <!-- <p class="desc"></p> -->
       </div>
 
       <div class="picture-frames-wrapper">
         <div class="portrait-wrapper">
-          <a href="https://www.github.com/smajewski1980" target="_blank">
+          <a
+            href="https://www.github.com/smajewski1980"
+            target="_blank"
+          >
             <img
               src="../assets/images/projectThumbs/avatar.png"
               alt=""
@@ -82,74 +103,82 @@
       </div>
 
       <div class="cards-inner-wrapper">
-          <div id="card-1" class="card card-snap" data-card="1">
-            <a
-              href="https://crazy-unicorn-shoppe-f53987c7fce3.herokuapp.com/index.html"
-              target="_blank"
-            >
-            </a>
-
-            <div class="proj-card-img-wrapper">
-              <img src="../assets/images/projectThumbs/unicorn_thumb.png" alt="a full-stack app" />
-            </div>
-
-            <div class="card-icons-wrapper">
-              <img class="icon" src="../assets/icons/html5logo.png" alt="html" />
-              <img class="icon" src="../assets/icons/Sass-Logo.png" alt="sass" />
-              <img
-                class="icon"
-                src="../assets/icons/jslogo.png"
-                alt="javascript"
-              />
-              <img
-              class="icon"
-              src="../assets/icons/express_logo.png"
-              alt="javascript"
-              />
-              <img
-                class="icon"
-                src="../assets/icons/postgres_icon.png"
-                alt="javascript"
-              />
-            </div>
-          </div>
-
-          <div id="card-2" class="card card-snap" data-card="2">
-            <a
-              href="https://resonant-biscuit-cdf86d.netlify.app/"
-              target="_blank"
-            >
-            </a>
-
-            <div class="proj-card-img-wrapper">
-              <img src="../assets/images/projectThumbs/change_changer.png" alt="a currency exchange app" />
-            </div>
-
-            <div class="card-icons-wrapper">
-              <img class="icon" src="../assets/icons/html5logo.png" alt="html" />
-              <img class="icon" src="../assets/icons/css3logo.png" alt="css" />
-              <img
-                class="icon"
-                src="../assets/icons/jslogo.png"
-                alt="javascript"
-              />
-            </div>
-          </div>
-
-        <div id="card-3" class="card card-snap" data-card="3">
+        <div
+          id="card-1"
+          class="card card-snap"
+          data-card="1"
+        >
           <a
-            href="./project_assets/dev_practice_nysa/index.html"
+            href="https://crazy-unicorn-shoppe-f53987c7fce3.herokuapp.com/index.html"
             target="_blank"
           >
           </a>
 
           <div class="proj-card-img-wrapper">
-            <img src="../assets/images/projectThumbs/nysa_thumb.png" alt="my version of the new york state assembly home page" />
+            <img
+              src="../assets/images/projectThumbs/unicorn_thumb.png"
+              alt="a full-stack app"
+            />
           </div>
 
           <div class="card-icons-wrapper">
-            <img class="icon" src="../assets/icons/html5logo.png" alt="html" />
-            <img class="icon" src="../assets/icons/css3logo.png" alt="css" />
+            <img
+              class="icon"
+              src="../assets/icons/html5logo.png"
+              alt="html"
+            />
+            <img
+              class="icon"
+              src="../assets/icons/Sass-Logo.png"
+              alt="sass"
+            />
+            <img
+              class="icon"
+              src="../assets/icons/jslogo.png"
+              alt="javascript"
+            />
+            <img
+              class="icon"
+              src="../assets/icons/express_logo.png"
+              alt="javascript"
+            />
+            <img
+              class="icon"
+              src="../assets/icons/postgres_icon.png"
+              alt="javascript"
+            />
+          </div>
+        </div>
+
+        <div
+          id="card-2"
+          class="card card-snap"
+          data-card="2"
+        >
+          <a
+            href="https://resonant-biscuit-cdf86d.netlify.app/"
+            target="_blank"
+          >
+          </a>
+
+          <div class="proj-card-img-wrapper">
+            <img
+              src="../assets/images/projectThumbs/change_changer.png"
+              alt="a currency exchange app"
+            />
+          </div>
+
+          <div class="card-icons-wrapper">
+            <img
+              class="icon"
+              src="../assets/icons/html5logo.png"
+              alt="html"
+            />
+            <img
+              class="icon"
+              src="../assets/icons/css3logo.png"
+              alt="css"
+            />
             <img
               class="icon"
               src="../assets/icons/jslogo.png"
@@ -158,7 +187,48 @@
           </div>
         </div>
 
-        <div id="card-4" class="card" data-card="4">
+        <div
+          id="card-3"
+          class="card card-snap"
+          data-card="3"
+        >
+          <a
+            href="./project_assets/dev_practice_nysa/index.html"
+            target="_blank"
+          >
+          </a>
+
+          <div class="proj-card-img-wrapper">
+            <img
+              src="../assets/images/projectThumbs/nysa_thumb.png"
+              alt="my version of the new york state assembly home page"
+            />
+          </div>
+
+          <div class="card-icons-wrapper">
+            <img
+              class="icon"
+              src="../assets/icons/html5logo.png"
+              alt="html"
+            />
+            <img
+              class="icon"
+              src="../assets/icons/css3logo.png"
+              alt="css"
+            />
+            <img
+              class="icon"
+              src="../assets/icons/jslogo.png"
+              alt="javascript"
+            />
+          </div>
+        </div>
+
+        <div
+          id="card-4"
+          class="card"
+          data-card="4"
+        >
           <a
             href="./project_assets/assembly_soundoff/index.html"
             target="_blank"
@@ -173,8 +243,16 @@
           </div>
 
           <div class="card-icons-wrapper">
-            <img class="icon" src="../assets/icons/html5logo.png" alt="html" />
-            <img class="icon" src="../assets/icons/css3logo.png" alt="css" />
+            <img
+              class="icon"
+              src="../assets/icons/html5logo.png"
+              alt="html"
+            />
+            <img
+              class="icon"
+              src="../assets/icons/css3logo.png"
+              alt="css"
+            />
             <img
               class="icon"
               src="../assets/icons/jslogo.png"
@@ -183,7 +261,11 @@
           </div>
         </div>
 
-        <div id="card-5" class="card" data-card="5">
+        <div
+          id="card-5"
+          class="card"
+          data-card="5"
+        >
           <a
             href="./project_assets/dev_Practice_esam/index.html"
             target="_blank"
@@ -191,12 +273,23 @@
           </a>
 
           <div class="proj-card-img-wrapper">
-            <img src="../assets/images/projectThumbs/esam_thumb.png" alt="my version of the visit page of emipre state aerosciences museum" />
+            <img
+              src="../assets/images/projectThumbs/esam_thumb.png"
+              alt="my version of the visit page of emipre state aerosciences museum"
+            />
           </div>
 
           <div class="card-icons-wrapper">
-            <img class="icon" src="../assets/icons/html5logo.png" alt="html" />
-            <img class="icon" src="../assets/icons/css3logo.png" alt="css" />
+            <img
+              class="icon"
+              src="../assets/icons/html5logo.png"
+              alt="html"
+            />
+            <img
+              class="icon"
+              src="../assets/icons/css3logo.png"
+              alt="css"
+            />
             <img
               class="icon"
               src="../assets/icons/jslogo.png"
@@ -205,8 +298,15 @@
           </div>
         </div>
 
-        <div id="card-6" class="card" data-card="6">
-          <a href="http://scmusicatalog.com" target="_blank">
+        <div
+          id="card-6"
+          class="card"
+          data-card="6"
+        >
+          <a
+            href="http://scmusicatalog.com"
+            target="_blank"
+          >
           </a>
 
           <div class="proj-card-img-wrapper">
@@ -217,8 +317,16 @@
           </div>
 
           <div class="card-icons-wrapper">
-            <img class="icon" src="../assets/icons/react_logo.png" alt="html" />
-            <img class="icon" src="../assets/icons/css3logo.png" alt="css" />
+            <img
+              class="icon"
+              src="../assets/icons/react_logo.png"
+              alt="html"
+            />
+            <img
+              class="icon"
+              src="../assets/icons/css3logo.png"
+              alt="css"
+            />
             <img
               class="icon"
               src="../assets/icons/postgres_icon.png"
@@ -227,8 +335,15 @@
           </div>
         </div>
 
-        <div id="card-7" class="card" data-card="7">
-          <a href="./project_assets/dev_practice_multi_step_form/index.html" target="_blank">
+        <div
+          id="card-7"
+          class="card"
+          data-card="7"
+        >
+          <a
+            href="./project_assets/dev_practice_multi_step_form/index.html"
+            target="_blank"
+          >
           </a>
 
           <div class="proj-card-img-wrapper">
@@ -239,8 +354,16 @@
           </div>
 
           <div class="card-icons-wrapper">
-            <img class="icon" src="../assets/icons/html5logo.png" alt="html" />
-            <img class="icon" src="../assets/icons/Sass-Logo.png" alt="sass" />
+            <img
+              class="icon"
+              src="../assets/icons/html5logo.png"
+              alt="html"
+            />
+            <img
+              class="icon"
+              src="../assets/icons/Sass-Logo.png"
+              alt="sass"
+            />
             <img
               class="icon"
               src="../assets/icons/jslogo.png"
@@ -249,8 +372,15 @@
           </div>
         </div>
 
-        <div id="card-8" class="card" data-card="8">
-          <a href="https://my-app-trivia.netlify.app/" target="_blank">
+        <div
+          id="card-8"
+          class="card"
+          data-card="8"
+        >
+          <a
+            href="https://my-app-trivia.netlify.app/"
+            target="_blank"
+          >
           </a>
 
           <div class="proj-card-img-wrapper">
@@ -261,8 +391,16 @@
           </div>
 
           <div class="card-icons-wrapper">
-            <img class="icon" src="../assets/icons/html5logo.png" alt="html" />
-            <img class="icon" src="../assets/icons/Sass-Logo.png" alt="sass" />
+            <img
+              class="icon"
+              src="../assets/icons/html5logo.png"
+              alt="html"
+            />
+            <img
+              class="icon"
+              src="../assets/icons/Sass-Logo.png"
+              alt="sass"
+            />
             <img
               class="icon"
               src="../assets/icons/jslogo.png"
@@ -270,31 +408,49 @@
             />
           </div>
         </div>
-        
-        <div id="card-9" class="card" data-card="9">
+
+        <div
+          id="card-9"
+          class="card"
+          data-card="9"
+        >
           <a
-          href="https://smajewski1980.github.io/product-list-with-cart/"
-          target="_blank"
+            href="https://smajewski1980.github.io/product-list-with-cart/"
+            target="_blank"
           >
           </a>
 
           <div class="proj-card-img-wrapper">
             <img
-            src="../assets/images/projectThumbs/desserts.png"
-            alt="shopping cart app"
+              src="../assets/images/projectThumbs/desserts.png"
+              alt="shopping cart app"
             />
           </div>
 
           <div class="card-icons-wrapper">
-            <img class="icon" src="../assets/icons/html5logo.png" alt="html" />
-            <img class="icon" src="../assets/icons/Sass-Logo.png" alt="sass" />
-            <img class="icon" src="../assets/icons/jslogo.png" alt="javascript" />
+            <img
+              class="icon"
+              src="../assets/icons/html5logo.png"
+              alt="html"
+            />
+            <img
+              class="icon"
+              src="../assets/icons/Sass-Logo.png"
+              alt="sass"
+            />
+            <img
+              class="icon"
+              src="../assets/icons/jslogo.png"
+              alt="javascript"
+            />
           </div>
         </div>
-      
 
-
-        <div id="card-10" class="card" data-card="10">
+        <div
+          id="card-10"
+          class="card"
+          data-card="10"
+        >
           <a
             href="./project_assets/dev_Practice_bookmark_landing_page/index.html"
             target="_blank"
@@ -309,8 +465,16 @@
           </div>
 
           <div class="card-icons-wrapper">
-            <img class="icon" src="../assets/icons/html5logo.png" alt="html" />
-            <img class="icon" src="../assets/icons/css3logo.png" alt="css" />
+            <img
+              class="icon"
+              src="../assets/icons/html5logo.png"
+              alt="html"
+            />
+            <img
+              class="icon"
+              src="../assets/icons/css3logo.png"
+              alt="css"
+            />
             <img
               class="icon"
               src="../assets/icons/jslogo.png"

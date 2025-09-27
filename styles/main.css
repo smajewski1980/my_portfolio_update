@@ -443,7 +443,7 @@ footer {
   z-index: 99;
 }
 .card-wrapper .info-wrapper {
-  bottom: calc(100% + 1.5rem);
+  bottom: 80%;
   min-height: 190px;
   position: absolute;
   right: 0%;
@@ -455,13 +455,21 @@ footer {
   font-variation-settings: "SHDW" 80, "BVEL" 70;
   letter-spacing: 5px;
   line-height: 1.1;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.card-wrapper .info-wrapper details {
+  position: relative;
+}
+.card-wrapper .info-wrapper details summary {
+  cursor: pointer;
+  list-style-type: none;
 }
 .card-wrapper .info-wrapper .desc {
   font-size: clamp(1rem, 1.25vw, 1.5rem);
   font-variation-settings: "SHDW" 100, "BVEL" 15;
   letter-spacing: 2px;
   line-height: 1.4;
+  position: absolute;
 }
 @media (width < 1700px) {
   .card-wrapper .info-wrapper {
@@ -477,6 +485,9 @@ footer {
   .card-wrapper .info-wrapper {
     bottom: 95%;
   }
+}
+.card-wrapper .desc-open {
+  bottom: 125%;
 }
 .card-wrapper .picture-frames-wrapper {
   display: flex;
