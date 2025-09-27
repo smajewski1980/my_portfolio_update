@@ -45,6 +45,9 @@ const descriptions = [
 ];
 const descTitle = document.querySelector('.desc-title');
 const desc = document.querySelector('.desc');
+const detailsEl = document.querySelector('details');
+const infoWrapper = document.querySelector('.info-wrapper');
+const cardWrapper = document.querySelector('.card-wrapper');
 let currentCard = 1;
 let moving = false;
 
@@ -99,3 +102,15 @@ btnPrev.addEventListener('click', prevCard);
 btnNext.addEventListener('click', nextCard);
 
 populateInfoFields();
+
+detailsEl.addEventListener('toggle', (event) => {
+  if (detailsEl.open) {
+    infoWrapper.classList.add('desc-open');
+    cardWrapper.classList.add('card-wrapper-low-opac');
+    desc.classList.add('desc-fade-in');
+  } else {
+    infoWrapper.classList.remove('desc-open');
+    cardWrapper.classList.remove('card-wrapper-low-opac');
+    desc.classList.remove('desc-fade-in');
+  }
+});
