@@ -46,6 +46,7 @@ const descriptions = [
 const descTitle = document.querySelector('.desc-title');
 const desc = document.querySelector('.desc');
 const detailsEl = document.querySelector('details');
+const summaryEl = document.querySelector('summary');
 const infoWrapper = document.querySelector('.info-wrapper');
 const cardWrapper = document.querySelector('.card-wrapper');
 let currentCard = 1;
@@ -103,7 +104,7 @@ btnNext.addEventListener('click', nextCard);
 
 populateInfoFields();
 
-detailsEl.addEventListener('toggle', (event) => {
+detailsEl.addEventListener('toggle', (e) => {
   if (detailsEl.open) {
     infoWrapper.classList.add('desc-open');
     cardWrapper.classList.add('card-wrapper-low-opac');
@@ -112,5 +113,22 @@ detailsEl.addEventListener('toggle', (event) => {
     infoWrapper.classList.remove('desc-open');
     cardWrapper.classList.remove('card-wrapper-low-opac');
     desc.classList.remove('desc-fade-in');
+  }
+});
+let closeTimeout;
+summaryEl.addEventListener('click', (e) => {
+  if (detailsEl.open) {
+    e.preventDefault();
+    desc.classList.remove('desc-fade-in');
+    desc.classList.add('desc-fade-out');
+    closeTimeout = setTimeout(() => {
+      detailsEl.removeAttribute('open');
+      desc.classList.remove('desc-fade-out');
+    }, 500);
+  } else {
+    if (closeTimeout) {
+      clearTimeout(closeTimeout);
+      desc.classList.remove('desc-fade-out');
+    }
   }
 });

@@ -65,6 +65,9 @@
     .desc-fade-in {
       animation: fade-in-text 0.5s 0.75s forwards;
     }
+    .desc-fade-out {
+      animation: fade-out-text 0.5s;
+    }
 
     @keyframes fade-in-text {
       0% {
@@ -72,6 +75,14 @@
       }
       100% {
         opacity: 1;
+      }
+    }
+    @keyframes fade-out-text {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
       }
     }
 
@@ -185,6 +196,6 @@
 
 .card-wrapper-low-opac {
   > *:not(.info-wrapper) {
-    opacity: 0.5;
+    opacity: 0.4;
   }
 }
