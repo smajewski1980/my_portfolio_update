@@ -32,8 +32,8 @@
     // * {
     //   outline: 2px solid lime;
     // }
-    bottom: calc(70%);
-    min-height: 190px;
+    bottom: calc(100% + 1rem);
+    // min-height: 190px;
     position: absolute;
     right: 0%;
     text-align: center;
@@ -63,10 +63,10 @@
     }
 
     .desc-fade-in {
-      animation: fade-in-text 0.5s 0.75s forwards;
+      animation: fade-in-text 0.35s 0.35s forwards;
     }
     .desc-fade-out {
-      animation: fade-out-text 0.5s;
+      animation: fade-out-text 0.35s;
     }
 
     @keyframes fade-in-text {
@@ -194,8 +194,8 @@
   }
 }
 
-.card-wrapper-low-opac {
-  > *:not(.info-wrapper) {
-    opacity: 0.4;
-  }
-}
+// .card-wrapper-low-opac {
+//   > *:not(.info-wrapper) {
+//     opacity: 0.4;
+//   }
+// }

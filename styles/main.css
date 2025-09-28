@@ -447,8 +447,7 @@ footer {
   z-index: 99;
 }
 .card-wrapper .info-wrapper {
-  bottom: 70%;
-  min-height: 190px;
+  bottom: calc(100% + 1rem);
   position: absolute;
   right: 0%;
   text-align: center;
@@ -473,10 +472,10 @@ footer {
   opacity: 0;
 }
 .card-wrapper .info-wrapper .desc-fade-in {
-  animation: fade-in-text 0.5s 0.75s forwards;
+  animation: fade-in-text 0.35s 0.35s forwards;
 }
 .card-wrapper .info-wrapper .desc-fade-out {
-  animation: fade-out-text 0.5s;
+  animation: fade-out-text 0.35s;
 }
 @keyframes fade-in-text {
   0% {
@@ -601,10 +600,6 @@ footer {
   .scroll-controls {
     font-size: 2.25rem;
   }
-}
-
-.card-wrapper-low-opac > *:not(.info-wrapper) {
-  opacity: 0.4;
 }
 
 .resume-img-wrapper {

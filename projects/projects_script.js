@@ -115,7 +115,9 @@ detailsEl.addEventListener('toggle', (e) => {
     desc.classList.remove('desc-fade-in');
   }
 });
+
 let closeTimeout;
+
 summaryEl.addEventListener('click', (e) => {
   if (detailsEl.open) {
     e.preventDefault();
@@ -124,7 +126,7 @@ summaryEl.addEventListener('click', (e) => {
     closeTimeout = setTimeout(() => {
       detailsEl.removeAttribute('open');
       desc.classList.remove('desc-fade-out');
-    }, 500);
+    }, 350);
   } else {
     if (closeTimeout) {
       clearTimeout(closeTimeout);
