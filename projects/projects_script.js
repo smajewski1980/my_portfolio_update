@@ -76,6 +76,9 @@ function prevCard() {
     if (currentCard === 1) {
       btnPrev.classList.add('inactive-control');
     }
+    if (detailsEl.open) {
+      detailsEl.style.maxHeight = `${detailsEl.scrollHeight}px`;
+    }
   }
 }
 function nextCard() {
@@ -90,6 +93,9 @@ function nextCard() {
     btnPrev.classList.remove('inactive-control');
     if (currentCard === 10) {
       btnNext.classList.add('inactive-control');
+    }
+    if (detailsEl.open) {
+      detailsEl.style.maxHeight = `${detailsEl.scrollHeight}px`;
     }
   }
 }
