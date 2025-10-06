@@ -29,16 +29,11 @@
   }
 
   .info-wrapper {
-    // * {
-    //   outline: 2px solid lime;
-    // }
     bottom: calc(100% + 1rem);
-    // min-height: 190px;
     position: absolute;
     right: 0%;
     text-align: center;
     width: 100vw;
-    transition: bottom 1s ease;
 
     .desc-title {
       font-size: clamp(1.25rem, 2vw, 2.5rem);
@@ -49,8 +44,16 @@
     }
 
     details {
+      max-height: 2.5rem;
+      transition: max-height 0.35s ease;
+
       summary {
         cursor: pointer;
+        margin-block-end: 0.25rem;
+      }
+
+      .is-open {
+        max-height: var(--details-height);
       }
     }
 
@@ -60,6 +63,8 @@
       letter-spacing: 2px;
       line-height: 1.4;
       opacity: 0;
+      max-width: 65ch;
+      margin-inline: auto;
     }
 
     .desc-fade-in {
@@ -97,10 +102,6 @@
     @include media-lt-650 {
       bottom: 95%;
     }
-  }
-
-  .desc-open {
-    bottom: calc(100% + 1rem);
   }
 
   .picture-frames-wrapper {

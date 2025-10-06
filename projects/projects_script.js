@@ -4,27 +4,27 @@ const btnNext = document.querySelector('.btn-next');
 const descriptions = [
   {
     title: 'The Crazy Unicorn Shoppe',
-    desc: 'This is a full stack e-commerce app. It is connected to a</br>database and allows users to make an account, have persistant cart data,</br>place an order and more. The Dev Info page will give you all the technical details.',
+    desc: 'This is a full stack e-commerce app. It is connected to a database and allows users to make an account, have persistant cart data, place an order and more. The Dev Info page will give you all the technical details.',
   },
   {
     title: 'The Change Changer',
-    desc: 'Here is a currency exchange app. When I deployed, in order to hide</br>my API key, I had to set up a Netlify Function, which acts as an endpoint</br>that my app can hit, which then hits the API and also has access to the environment variables.',
+    desc: 'Here is a currency exchange app. When I deployed, in order to hide my API key, I had to set up a Netlify Function, which acts as an endpoint that my app can hit, which then hits the API and also has access to the environment variables.',
   },
   {
     title: 'New York State Assembly Home Page',
-    desc: 'What a great page for a portfolio!</br>This one includes a carousel of links and an interactive calendar.</br>It is also responsive.',
+    desc: 'What a great page for a portfolio! This one includes a carousel of links and an interactive calendar. It is also responsive.',
   },
   {
     title: 'Assembly Sound Off(the floor)',
-    desc: "This was a fun music app I made for a few laughs in the office.</br>This one includes you gettin' down!",
+    desc: "This was a fun music app I made for a few laughs in the office. This one includes you gettin' down!",
   },
   {
     title: 'Empire State Aerosciences Museum',
-    desc: 'I went there and thought this would be a fun page to build.</br>This one includes a few modals and an image gallery.</br>It also shows the live weather at the museum.',
+    desc: 'I went there and thought this would be a fun page to build. This one includes a few modals and an image gallery. It also shows the live weather at the museum.',
   },
   {
     title: 'My Music Catalog v2',
-    desc: 'Built with React.js, it is my current catalog and is a work in progress.</br>This one includes a 10x10 storage unit with all of this music inside.',
+    desc: 'Built with React.js, it is my current catalog and is a work in progress. This one includes a 10x10 storage unit with all of this music inside.',
   },
   {
     title: 'Multi-Step Form',
@@ -36,11 +36,11 @@ const descriptions = [
   },
   {
     title: 'Product List With Cart',
-    desc: 'A Frontend Mentor project of an interactive product shopping cart,</br>which has a responsive layout and an order confirmation modal.',
+    desc: 'A Frontend Mentor project of an interactive product shopping cart, which has a responsive layout and an order confirmation modal.',
   },
   {
     title: 'Bookmark Landing Page',
-    desc: 'A Frontend Mentor project.</br>This one includes a section with tabs that switch content and a faq accordion.',
+    desc: 'A Frontend Mentor project. This one includes a section with tabs that switch content and a faq accordion.',
   },
 ];
 const descTitle = document.querySelector('.desc-title');
@@ -106,11 +106,10 @@ populateInfoFields();
 
 detailsEl.addEventListener('toggle', (e) => {
   if (detailsEl.open) {
-    infoWrapper.classList.add('desc-open');
     cardWrapper.classList.add('card-wrapper-low-opac');
     desc.classList.add('desc-fade-in');
+    detailsEl.style.maxHeight = `${detailsEl.scrollHeight}px`;
   } else {
-    infoWrapper.classList.remove('desc-open');
     cardWrapper.classList.remove('card-wrapper-low-opac');
     desc.classList.remove('desc-fade-in');
   }
@@ -124,8 +123,12 @@ summaryEl.addEventListener('click', (e) => {
     desc.classList.remove('desc-fade-in');
     desc.classList.add('desc-fade-out');
     closeTimeout = setTimeout(() => {
-      detailsEl.removeAttribute('open');
-      desc.classList.remove('desc-fade-out');
+      detailsEl.style.maxHeight = '2.5rem';
+
+      setTimeout(() => {
+        detailsEl.removeAttribute('open');
+        desc.classList.remove('desc-fade-out');
+      }, 350);
     }, 350);
   } else {
     if (closeTimeout) {

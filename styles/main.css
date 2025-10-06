@@ -452,7 +452,6 @@ footer {
   right: 0%;
   text-align: center;
   width: 100vw;
-  transition: bottom 1s ease;
 }
 .card-wrapper .info-wrapper .desc-title {
   font-size: clamp(1.25rem, 2vw, 2.5rem);
@@ -461,8 +460,16 @@ footer {
   line-height: 1.1;
   margin-bottom: 1.25rem;
 }
+.card-wrapper .info-wrapper details {
+  max-height: 2.5rem;
+  transition: max-height 0.35s ease;
+}
 .card-wrapper .info-wrapper details summary {
   cursor: pointer;
+  margin-block-end: 0.25rem;
+}
+.card-wrapper .info-wrapper details .is-open {
+  max-height: var(--details-height);
 }
 .card-wrapper .info-wrapper .desc {
   font-size: clamp(1rem, 1.25vw, 1.5rem);
@@ -470,6 +477,8 @@ footer {
   letter-spacing: 2px;
   line-height: 1.4;
   opacity: 0;
+  max-width: 65ch;
+  margin-inline: auto;
 }
 .card-wrapper .info-wrapper .desc-fade-in {
   animation: fade-in-text 0.35s 0.35s forwards;
@@ -507,9 +516,6 @@ footer {
   .card-wrapper .info-wrapper {
     bottom: 95%;
   }
-}
-.card-wrapper .desc-open {
-  bottom: calc(100% + 1rem);
 }
 .card-wrapper .picture-frames-wrapper {
   display: flex;
