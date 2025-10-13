@@ -4,35 +4,35 @@ const btnNext = document.querySelector('.btn-next');
 const descriptions = [
   {
     title: 'The Crazy Unicorn Shoppe',
-    desc: 'This is a full stack e-commerce app. It is connected to a database and allows users to make an account, have persistant cart data, place an order and more. The Dev Info page will give you all the technical details.',
+    desc: 'This is a full stack e-commerce app. It uses a Postgres database and allows users to make an account, have persistant cart data, place an order and more. The Dev Info page contains all the technical details.',
   },
   {
     title: 'The Change Changer',
-    desc: 'Here is a currency exchange app. When I deployed, in order to hide my API key, I had to set up a Netlify Function, which acts as an endpoint that my app can hit, which then hits the API and also has access to the environment variables.',
+    desc: 'When I deployed this currency exchange app, to hide my API key I set up a Netlify Function to make the API call. The function acts as a backend endpoint that has access to the environment variables.',
   },
   {
     title: 'New York State Assembly Home Page',
-    desc: 'What a great page for a portfolio! This one includes a carousel of links and an interactive calendar. It is also responsive.',
+    desc: "What a great page for a portfolio! This page includes an interactive carousel of slides/links and an interactive calendar. It's also responsive and adjusts the layout on a small screen.",
   },
   {
     title: 'Assembly Sound Off(the floor)',
-    desc: "This was a fun music app I made for a few laughs in the office. This one includes you gettin' down!",
+    desc: "This was a fun music app I made for a few laughs in the office. In the context of musical timing, this app helped me understand the difference between a 'click' event and a 'mousedown' event.",
   },
   {
     title: 'Empire State Aerosciences Museum',
-    desc: 'I went there and thought this would be a fun page to build. This one includes a few modals and an image gallery. It also shows the live weather at the museum.',
+    desc: 'When I saw this page while preparing for a visit, I thought it would be a fun page to build. It includes a few modals, an image gallery and an image carousel. It also shows the live weather at the museum.',
   },
   {
     title: 'My Music Catalog v2',
-    desc: 'Built with React.js, it is my current catalog and is a work in progress. This one includes a 10x10 storage unit with all of this music inside.',
+    desc: 'This is a React app I built for Codecademy. It does not connect to my database, it just references flat files. I still need to add a search feature, but I already started working on the next version.',
   },
   {
     title: 'Multi-Step Form',
-    desc: 'A Frontend Mentor project of a multi-step HTML form.',
+    desc: 'This is a Frontend Mentor project of a multi-step HTML form. The final step of the form uses the collected data from the other steps to produce an order summary and total.',
   },
   {
     title: 'My Trivia App',
-    desc: 'A little trivia app I made to practice working with fetched API data.',
+    desc: 'Here is a trivia app I made to practice working with fetched API data. The API returns both multiple choice and boolean questions.',
   },
   {
     title: 'Product List With Cart',
