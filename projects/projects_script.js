@@ -12,7 +12,7 @@ const descriptions = [
   },
   {
     title: 'New York State Assembly Home Page',
-    desc: "What a great page for a portfolio! This page includes an interactive carousel of slides/links and an interactive calendar. It's also responsive and adjusts the layout on a small screen.",
+    desc: "What a great page for a portfolio! This page includes an interactive carousel of slides/links and an interactive calendar. It's also responsive and adjusts the layout for small screens.",
   },
   {
     title: 'Assembly Sound Off(the floor)',
