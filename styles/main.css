@@ -430,9 +430,6 @@ footer {
   transform: translateX(calc(-125px + var(--gap-spacer) * -1));
   width: calc(50vw + 125px + var(--gap-spacer));
 }
-.card-wrapper > *:not(.info-wrapper) {
-  transition: opacity 1s ease;
-}
 .card-wrapper::before {
   border-radius: 15px;
   content: "";

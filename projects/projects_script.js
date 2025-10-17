@@ -107,7 +107,6 @@ function populateInfoFields() {
 
 btnPrev.addEventListener('click', prevCard);
 btnNext.addEventListener('click', nextCard);
-
 populateInfoFields();
 
 detailsEl.addEventListener('toggle', (e) => {

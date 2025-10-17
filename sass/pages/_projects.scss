@@ -10,10 +10,6 @@
   transform: translateX(calc(-125px + (var(--gap-spacer) * -1)));
   width: calc(50vw + (125px + var(--gap-spacer)));
 
-  > *:not(.info-wrapper) {
-    transition: opacity 1s ease;
-  }
-
   &::before {
     border-radius: $b-rad;
     content: '';
