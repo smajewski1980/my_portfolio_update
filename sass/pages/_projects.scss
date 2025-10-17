@@ -88,15 +88,15 @@
     }
 
     @include media-lt-1700 {
-      bottom: 95%;
+      bottom: 100%;
     }
 
     @include media-lt-1200 {
-      bottom: 85%;
+      bottom: 100%;
     }
 
     @include media-lt-650 {
-      bottom: 95%;
+      bottom: 100%;
     }
   }
 
@@ -106,7 +106,7 @@
     position: absolute;
     right: calc(100% + 1rem);
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-47%);
 
     > * {
       width: 10rem;
@@ -116,6 +116,9 @@
       }
     }
 
+    @include media-lt-1700 {
+      top: 40%;
+    }
     @include media-lt-1000 {
       flex-direction: column;
     }
