@@ -10,7 +10,7 @@ const toursGalleryPicsMed = [
 ];
 
 const mediumGalleryPic = document.querySelector(
-  ".tours-gallery-image-wrapper img"
+  ".tours-gallery-image-wrapper img",
 );
 let toursGalleryIndex = 0;
 
@@ -114,7 +114,7 @@ function imageModal(e) {
 // for selecting image
 
 const modalThumbs = document.querySelectorAll(
-  ".tours-gallery-modal-thumbs-wrapper img"
+  ".tours-gallery-modal-thumbs-wrapper img",
 );
 let modalThumbIndex;
 let clickedThumbIdx;
@@ -153,12 +153,13 @@ const carouselSlider = document.querySelector(".carousel-slider");
 const carouselSliderImgs = carouselSlider.getElementsByTagName("img");
 
 function carouselMove() {
+  // debugger;
   carouselSlider.classList.add("move-carousel");
   setTimeout(() => {
     let firstSlide = carouselSlider.removeChild(carouselSliderImgs[0]);
     carouselSlider.appendChild(firstSlide);
     carouselSlider.classList.remove("move-carousel");
-  }, 3000);
+  }, 5000);
 }
 
-const startCarousel = setInterval(carouselMove, 6000);
+const startCarousel = setInterval(carouselMove, 10000);

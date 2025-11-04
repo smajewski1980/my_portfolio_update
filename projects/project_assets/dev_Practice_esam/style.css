@@ -644,7 +644,7 @@ h3 {
 }
 
 .move-carousel {
-  animation: move-carousel 3s ease-in-out;
+  animation: move-carousel 5s ease-in-out forwards;
 }
 
 @keyframes move-carousel {
