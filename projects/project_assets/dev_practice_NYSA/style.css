@@ -276,10 +276,6 @@ h1 {
   padding-inline: 2em;
 }
 
-.icon-svg-wrapper {
-  margin-top: auto;
-}
-
 .icons-links svg {
   background: var(--clr-semi-opaq-white);
   border-radius: 5px;
